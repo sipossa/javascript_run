@@ -27,3 +27,5 @@
 ```
 
 * 외부링크: <http://example.com/?target=_blank>
+
+* 외부링크: [menu](http://example.com){:target="_blank"}
