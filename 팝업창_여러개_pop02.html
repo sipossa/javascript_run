@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>popup01</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <style>
+        #visual {
+            height: 100vh;
+            background: #333;
+            color: #fff;
+            line-height: 100vh;
+            text-align: center;
+        }
+
+        #popup01 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 400px;
+            background: #f00;
+        }
+        #popup02 {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 400px;
+            background: #ff0;
+        }
+
+        .pop_close {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="visual">
+        <h2>visual content</h2>
+    </section>
+    <div id="popup01">
+        <button class="pop_close">CLOSE</button>
+    </div>
+    <div id="popup02">
+        <button class="pop_close">CLOSE</button>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const d = document;
+            const CLOSE_BTN = d.querySelectorAll('.pop_close');
+            CLOSE_BTN.forEach(el=>{
+                el.addEventListener('click', e => {
+                    e.target.parentNode.style.display = 'none'
+                })
+            })
+            // CLOSE_BTN.addEventListener('click', function () {
+            //     this.parentNode.style.display = 'none'
+            // })
+
+        })
+    </script>
+</body>
+
+</html>
