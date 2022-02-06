@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햅버그메뉴만들기_hamburgs02</title>
+    <style>
+        #hamburgs_menu>li>div {
+            display: none;
+        }
+
+        #hamburgs_menu>li>div.on {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="hamburgs_menu">
+        <li><a href="#">hamburgs01</a>
+            <div class="on">hamburgs_content01</div>
+        </li>
+        <li><a href="#">hamburgs02</a>
+            <div>hamburgs_content02</div>
+        </li>
+        <li><a href="#">hamburgs03</a>
+            <div>hamburgs_content03</div>
+        </li>
+    </ul>
+    <script>
+        //DOM을 모두 로드하고 난 후
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('ok');
+
+            const d = document;
+            const hamburgs_menu = d.querySelectorAll('#hamburgs_menu>li>a');
+            const hamburgs_content = d.querySelectorAll('#hamburgs_menu>li>div');
+
+            hamburgs_menu.forEach((el, idx) => {
+                el.addEventListener('click', e => {
+                    let tg = e.target;
+                    hamburgs_content.forEach(el=>el.classList.remove('on'))
+                    tg.nextElementSibling.classList.add('on');
+                    e.preventDefault();
+                })
+            })
+
+        });
+    </script>
+</body>
+
+</html>
