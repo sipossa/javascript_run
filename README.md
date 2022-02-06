@@ -1,5 +1,9 @@
 # javascript_run
 
+
+![me](https://avatars.githubusercontent.com/u/87564335?v=4)
+
+
 ## 책구입
 
 
