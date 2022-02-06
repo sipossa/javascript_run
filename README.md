@@ -26,4 +26,4 @@
             })
 ```
 
-* 외부링크: <http://example.com/>
+* 외부링크: <http://example.com/> {target="_blank"}
