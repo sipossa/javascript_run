@@ -18,16 +18,15 @@
 
 
 ```javascript
+window.addEventListener('DOMContentLoaded', () => {
+    const d = document;
+    const CLOSE_BTN = d.querySelector('#pop_close');
+    CLOSE_BTN.addEventListener('click', function () {
+        console.log(this,1)
+        this.parentNode.style.display = 'none'
+    })
 
-            hamburgs_menu.forEach((el, idx) => {
-                el.addEventListener('click', function (e) {
-                    hamburgs_menu.forEach(el=>el.classList.remove('on'))
-                    this.classList.add('on');
-                    hamburgs_content.forEach(el=>el.classList.remove('on'))
-                    this.nextElementSibling.classList.add('on')
-                }
-                )
-            })
+})
 ```
 
 
@@ -37,7 +36,7 @@
 - <https://sipossa.github.io/javascript_run/상단으로올라가는버튼_toTop01.html> 
 - <https://sipossa.github.io/javascript_run/텝메뉴만들기_이벤트타겟_tab02.html> 
 - <https://sipossa.github.io/javascript_run/텝메뉴만들기_tab01.html> 
-- <https://sipossa.github.io/javascript_run/팝업창_여러개_pop02.htm> 
+- <https://sipossa.github.io/javascript_run/팝업창_여러개_pop02.html> 
 - <https://sipossa.github.io/javascript_run/팝업창_pop01.html> 
 - <https://sipossa.github.io/javascript_run/햄버그메뉴만들기_이벤트타겟_hamburgs02.html> 
 - <https://sipossa.github.io/javascript_run/햄버그메뉴만들기_hamburgs01.html> 
