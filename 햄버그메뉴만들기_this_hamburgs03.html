@@ -38,11 +38,9 @@
     <script>
         //DOM을 모두 로드하고 난 후
         window.addEventListener('DOMContentLoaded', () => {
-            console.log('ok');
 
-            const d = document;
-            const hamburgs_menu = d.querySelectorAll('#hamburgs_menu>li>a');
-            const hamburgs_content = d.querySelectorAll('#hamburgs_menu>li>div');
+            const hamburgs_menu = document.querySelectorAll('#hamburgs_menu>li>a');
+            const hamburgs_content = document.querySelectorAll('#hamburgs_menu>li>div');
 
             hamburgs_menu.forEach((el, idx) => {
                 el.addEventListener('click', function (e) {

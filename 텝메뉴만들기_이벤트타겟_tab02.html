@@ -39,18 +39,15 @@
     <script>
         //DOM을 모두 로드하고 난 후
         window.addEventListener('DOMContentLoaded', () => {
-            console.log('ok');
+            const TAB_MENU = document.querySelectorAll('#tab_menu>li');
+            const TAB_CONTENT = document.querySelectorAll('#tab_content>div');
 
-            const d = document;
-            const tab_menu = d.querySelectorAll('#tab_menu>li');
-            const tab_content = d.querySelectorAll('#tab_content>div');
-
-            tab_menu.forEach((el, idx) => {
-                el.addEventListener('click', (e) => {
+            TAB_MENU.forEach((el, idx) => {
+                el.addEventListener('click', e => {
                     console.log(idx)//index 번호 
-                    tab_content.forEach(el => el.classList.remove('on'));
-                    tab_content[idx].classList.add('on');
-                    tab_menu.forEach(el => el.classList.remove('on'));
+                    TAB_CONTENT.forEach(el => el.classList.remove('on'));
+                    TAB_CONTENT[idx].classList.add('on');
+                    TAB_MENU.forEach(el => el.classList.remove('on'));
                     e.target.parentNode.classList.add('on');// e.target == a, e.currentTarget == li
                     e.preventDefault();
                 })

@@ -58,6 +58,7 @@
         window.addEventListener('DOMContentLoaded', () => {
 
             const CLOSE_BTN = document.querySelectorAll('.pop_close');
+            console.log(CLOSE_BTN.length)
             CLOSE_BTN.forEach(el=>{
                 el.addEventListener('click', e => {
                     e.target.parentNode.style.display = 'none'

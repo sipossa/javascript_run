@@ -36,11 +36,10 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            const d = document;
-            const toTop = d.querySelector('#toTop');
-            toTop.addEventListener('click', (e) => {
-                //d.body.scrollTop = 0; // For Safari
-                //d.documentElement.scrollTop = 0;
+            const TO_TOP = document.querySelector('#toTop');
+            TO_TOP.addEventListener('click', e => {
+                //document.body.scrollTop = 0; // For Safari
+                //document.documentElement.scrollTop = 0;
                 window.scrollTo({ top: 0, behavior: 'smooth' });  //부드럽게 움직이기
                 e.preventDefault();
             });

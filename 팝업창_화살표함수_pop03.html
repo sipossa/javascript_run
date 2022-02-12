@@ -43,13 +43,18 @@
         <button id="pop_close">CLOSE</button>
     </div>
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const CLOSE_BTN = documen.querySelector('#pop_close');
-            CLOSE_BTN.addEventListener('click', function () {
-                console.log(this,1)
-                this.parentNode.style.display = 'none'
-            })
+        // window.onload = () => {
+        //     const CLOSE_BTN = document.querySelector('#pop_close');
+        //     CLOSE_BTN.addEventListener('click', function () {
+        //         console.log(this)//이벤트 리스너 안에서의 this
+        //         this.parentNode.style.display = 'none'
+        //     })
 
+        // }
+
+        window.addEventListener('load', function(){
+            const CLOSE_BTN = document.querySelector('#pop_close');
+            CLOSE_BTN.addEventListener('click', e => ( e.target.parentElement.style.display = 'none'))
         })
     </script>
 </body>

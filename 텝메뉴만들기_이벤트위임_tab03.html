@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab02</title>
+    <style>
+        #tab_menu li a {
+            color: #333;
+        }
+
+        #tab_menu li.on a {
+            color: #F00;
+        }
+
+        #tab_content>div {
+            display: none;
+        }
+
+        #tab_content>div.on {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="tab_menu">
+        <li class="on"><a href="#">tab01</a></li>
+        <li><a href="#">tab02</a></li>
+        <li><a href="#">tab03</a></li>
+    </ul>
+    <div id="tab_content">
+        <div class="on">tab_content01</div>
+        <div>tab_content02</div>
+        <div>tab_content03</div>
+    </div>
+    <script>
+        //DOM을 모두 로드하고 난 후
+        window.addEventListener('DOMContentLoaded', () => {
+
+            let currentMenu;
+            let currentCon;
+            const TAB_MENU = document.querySelector('#tab_menu');
+            const TAB_CONTENT = document.querySelectorAll('#tab_content>div');
+
+            const tabClickHandler = e => {
+                
+                let currentTab = e.target.parentElement;
+                let childEl = currentTab.parentElement.children;
+                let tabIndex = Array.from(childEl).indexOf(currentTab);
+                console.log(currentTab,childEl,tabIndex);
+
+                if(currentCon) {
+                    currentCon.classList.remove('on');
+                }else {
+                    TAB_CONTENT[0].classList.remove('on');
+                    TAB_MENU.children[0].classList.remove('on');
+                }
+                TAB_CONTENT[tabIndex].classList.add('on');
+                currentCon = TAB_CONTENT[tabIndex];
+
+                if(currentMenu) {
+                    currentMenu.classList.remove('on');
+                }
+                currentTab.classList.add('on');
+                currentMenu = currentTab;
+                
+            }
+
+            TAB_MENU.addEventListener('click',tabClickHandler,false)
+
+        });
+    </script>
+</body>
+
+</html>
