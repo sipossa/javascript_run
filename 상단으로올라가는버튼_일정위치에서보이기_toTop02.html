@@ -45,23 +45,22 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            const W = window;
-            const D = document;
-            const toTop = d.querySelector('#toTop');
+
+            const toTop = document.querySelector('#toTop');
             toTop.addEventListener('click', e => {
-                //D.body.scrollTop = 0; // For Safari
-                //D.documentElement.scrollTop = 0;
-                W.scrollTo({ top: 0, behavior: 'smooth' });  //부드럽게 움직이기
+                //document.body.scrollTop = 0; // For Safari
+                //document.documentElement.scrollTop = 0;
+                window.scrollTo({ top: 0, behavior: 'smooth' });  //부드럽게 움직이기
                 e.preventDefault();
             });
 
             const scrollFunction = () => {
-                let sct = W.scrollY || W.pageYOffset;
+                let sct = window.scrollY || window.pageYOffset;
                 sct > 500 ? toTop.classList.add('on') : toTop.classList.remove('on');
             }
 
 
-            W.addEventListener('scroll', scrollFunction, false)
+            window.addEventListener('scroll', scrollFunction, false)
 
 
 

@@ -37,9 +37,8 @@
 
             hamburgs_menu.forEach((el, idx) => {
                 el.addEventListener('click', e => {
-                    let tg = e.target;
                     hamburgs_content.forEach(el=>el.classList.remove('on'))
-                    tg.nextElementSibling.classList.add('on');
+                    e.target.nextElementSibling.classList.add('on');
                     e.preventDefault();
                 })
             })

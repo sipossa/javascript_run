@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>popup01</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <style>
+        #visual {
+            height: 100vh;
+            background: #333;
+            color: #fff;
+            line-height: 100vh;
+            text-align: center;
+        }
+
+        #popup01 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 400px;
+            background: #f00;
+        }
+        #popup02 {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 400px;
+            background: #ff0;
+        }
+
+        .pop_close {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="visual">
+        <h2>visual content</h2>
+    </section>
+    <div id="popup01">
+        <button class="pop_close">CLOSE</button>
+    </div>
+    <div id="popup02">
+        <button class="pop_close">CLOSE</button>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+
+            const CLOSE_BTN = document.querySelectorAll('.pop_close');          
+
+            function closePOP () {
+                this.parentNode.style.display = 'none'
+            }
+
+            for (let i=0;i<CLOSE_BTN.length ;i++) {
+                //console.log(i);
+                CLOSE_BTN[i].addEventListener('click', closePOP)
+            }
+
+
+            //console.log(CLOSE_BTN.length);
+
+            // CLOSE_BTN.addEventListener('click', function () {
+            //     this.parentNode.style.display = 'none'
+            // })
+
+            //{  onload와 DOMContentLoaded의 차이는!
+
+            // onload - 외부자원과 이미지 로드가 모두 끝났을때 발생한다.
+            // DOMContentLoaded - dom이 로드가 끝났을때 발생한다.
+
+            // 그러므로 DOMContentLoaded이 onload보다 더 빠르다.
+
+            // Jquery에서 DOMContentLoaded 비슷한 기능을 하는것이!
+            // $(document).ready()
+            // DOMContentLoaded 이벤트는 초기 HTML 문서를 완전히 불러오고 분석했을 때 발생합니다. 스타일 시트, 이미지, 하위 프레임의 로딩은 기다리지 않습니다.
+
+        })
+    </script>
+</body>
+
+</html>

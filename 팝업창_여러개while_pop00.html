@@ -58,12 +58,27 @@
         window.addEventListener('DOMContentLoaded', () => {
 
             const CLOSE_BTN = document.querySelectorAll('.pop_close');
-            console.log(CLOSE_BTN.length)
-            CLOSE_BTN.forEach(el=>{
-                el.addEventListener('click', e => {
-                    e.target.parentNode.style.display = 'none'
-                })
-            })
+           
+
+            function closePOP () {
+                this.parentNode.style.display = 'none'
+            }
+
+            let i=0;
+            while (i<CLOSE_BTN.length) {
+                CLOSE_BTN[i].addEventListener('click', closePOP);
+                i++;
+                console.log(i)
+            }
+
+            // for (let i=0;i<CLOSE_BTN.length ;i++) {
+            //     //console.log(i);
+            //     CLOSE_BTN[i].addEventListener('click', closePOP)
+            // }
+
+
+            //console.log(CLOSE_BTN.length);
+
             // CLOSE_BTN.addEventListener('click', function () {
             //     this.parentNode.style.display = 'none'
             // })

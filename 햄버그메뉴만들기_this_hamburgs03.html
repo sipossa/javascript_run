@@ -43,7 +43,7 @@
             const hamburgs_content = document.querySelectorAll('#hamburgs_menu>li>div');
 
             hamburgs_menu.forEach((el, idx) => {
-                el.addEventListener('click', function (e) {
+                el.addEventListener('click', function () {
                     hamburgs_menu.forEach(el=>el.classList.remove('on'))
                     this.classList.add('on');
                     hamburgs_content.forEach(el=>el.classList.remove('on'))
