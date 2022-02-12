@@ -19,13 +19,12 @@
 
 ```javascript
 window.addEventListener('DOMContentLoaded', () => {
-    const d = document;
-    const CLOSE_BTN = d.querySelector('#pop_close');
-    CLOSE_BTN.addEventListener('click', function () {
-        console.log(this,1)
-        this.parentNode.style.display = 'none'
+    const CLOSE_BTN = document.querySelectorAll('.pop_close');
+    CLOSE_BTN.forEach(el=>{
+        el.addEventListener('click', e => {
+            e.target.parentNode.style.display = 'none'
+        })
     })
-
 })
 ```
 
