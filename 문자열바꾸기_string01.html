@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="string"> </div>
+    <button id="changName" value="kim chang hun">이름 바꾸기</button>
+    <script>
+        const NAME_MY = document.querySelector('.string');
+        let nameVal = `lee chang hun`;
+        NAME_MY.innerHTML = `my name is ${nameVal}`;
+
+        changName.onclick=function(){  //아이디는 이렇게 선택할 수 있으나 추천하지는 않음...
+            console.log(this.value);
+            NAME_MY.innerHTML = `my name is ${this.value}`;
+        }
+    </script>
+</body>
+</html>
