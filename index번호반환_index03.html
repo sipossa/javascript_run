@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu__item li.on {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu__item">
+        <li>menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+        <li>menu05</li>
+    </ul>
+    <script>
+        const MENU_ITM = document.querySelectorAll('.menu__item li');
+        MENU_ITM.forEach((el,idx) => {
+            el.addEventListener('click', ()=>{
+                console.log(idx); //forEach 메소드의 드번째 파라미터로 번호 가져오기
+                MENU_ITM.forEach(el=>el.classList.remove('on'))
+                MENU_ITM[idx].classList.add('on');
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

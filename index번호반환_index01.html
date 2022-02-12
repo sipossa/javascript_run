@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu__item li.on {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu__item">
+        <li>menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+        <li>menu05</li>
+    </ul>
+    <script>
+        const MENU_ITM = document.querySelector('.menu__item');
+        let currentMenu;
+        MENU_ITM.addEventListener('click', e => {
+            let idx = [...MENU_ITM.children].indexOf(e.target);
+            //위임받은 이벤트의 번호를 배열에서 가져옴. 
+            //유사배열을 배열로 만든 ES6에서는  '...'와 같이 다소 특이한 형태의 문법이 추가되었습니다. 
+            //점 3개가 연달아 붙어있는 이 표시는 Spread Opertor(스프레드 오퍼레이터, 스프레드 연산자, 전개 구문, 펼침 연산자...)를 
+            //나타내는 것으로, 배열, 함수, 객체 등을 다루는 데 있어서 매우 편리하고 재미(?) 있는 새로운 기능을 제공합니다.
+            console.log(e.target, this == MENU_ITM, idx, e.target == this, e.currentTarget == this);
+            let menuTarget = e.target;
+            if (currentMenu) currentMenu.classList.remove('on');
+            menuTarget.classList.add('on');
+            currentMenu = menuTarget;
+        })
+    </script>
+</body>
+
+</html>
