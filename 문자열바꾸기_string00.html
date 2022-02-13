@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="string">my name is lee</div>
+    <div class="string">my name is you chang hun</div>
     <button class="changeName" value="kim chang hun">이름 바꾸기</button>
+    <button class="changeName" value="park chang hun">이름 바꾸기</button>
+    <button class="changeName" value='jung chang hun'>이름 바꾸기</button>
     <script>
         const NAME_MY = document.querySelector('.string');
-        const NAME_BTN = document.querySelector('.changeName');
+        const NAME_BTN = document.querySelectorAll('.changeName');
 
         //NAME_MY.userName = 'park'
 
-        const changeName = () => {  
-            let nameVal = NAME_MY.userName ?? 'kim';
+        const changeName = (userName) => {
+            let nameVal = userName ?? 'lee chang hun';
             NAME_MY.innerHTML = `my name is ${nameVal}`;
         }
 
-        NAME_BTN.addEventListener('click', changeName)
+        NAME_BTN.forEach(
+            el => el.addEventListener('click', e => {
+                let valThis = e.target.value;
+                changeName(valThis)
+            })
+        );
 
+        changeName();
 
     </script>
 </body>
+
 </html>

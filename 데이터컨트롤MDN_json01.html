@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Our superheroes</title>
+
+</head>
+
+<body>
+
+  <div id="first__data__bind"></div>
+  <script>
+
+
+    async function populate() {
+
+      const requestURL = 'superheroes.json';
+      const request = new Request(requestURL);
+
+      const response = await fetch(request);
+      const superHeroesText = await response.text();
+
+      const superHeroes = JSON.parse(superHeroesText);
+      populateHeader(superHeroes);
+
+    }
+
+    function populateHeader(JSNDATA) {
+      const DATA_CON = document.querySelector('#first__data__bind');
+      const CREAT_CON = document.createElement('p');
+      const M_CON = document.createElement('strong');
+      CREAT_CON.textContent = JSNDATA['squadName'];
+      DATA_CON.append(CREAT_CON);
+    }
+
+    populate();
+
+
+
+  </script>
+</body>
+
+</html>

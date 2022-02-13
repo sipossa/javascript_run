@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="first__data__bind"></div>
+
+
+
+  <script>
+    async function populate() {
+      const requestURL = 'superheroes.json';
+      const request = new Request(requestURL);
+
+      const response = await fetch(request);
+      const superHeroesText = await response.text();
+
+      const superHeroes = JSON.parse(superHeroesText);
+      populateHeader(superHeroes);
+      populateHeroes(superHeroes);
+
+    }
+
+    function populateHeader(JSNDATA) {
+      const DATA_CON = document.querySelector('#first__data__bind');
+      const CREAT_CON = document.createElement('p');
+      CREAT_CON.textContent = JSNDATA['squadName'];
+      DATA_CON.append(CREAT_CON);
+    }
+
+
+    function populateHeroes(JSNDATA) {
+      const DATA_CON = document.querySelector('#first__data__bind');
+      const myUL = document.createElement('ul');
+      const heroes = JSNDATA['members'];
+      DATA_CON.append(myUL);
+      console.log(typeof (heroes));
+
+      // for (const hero of heroes) {
+      //   const myList = document.createElement('div');
+
+      //   myList.textContent = hero.name;
+      //   DATA_CON.append(myList);
+      // }
+      heroes.map(hero => {
+        const myList = document.createElement('li');
+        myList.textContent = `${hero.name} 입니다.`;
+        myUL.append(myList);
+      })
+
+    }
+
+    populate();
+  </script>
+</body>
+
+</html>
