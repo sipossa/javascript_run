@@ -46,31 +46,29 @@
             const TAB_CONTENT = document.querySelectorAll('#tab_content>div');
 
             const tabClickHandler = e => {
-                
+
                 let currentTab = e.target.parentElement;
                 let childEl = currentTab.parentElement.children;
                 //let tabIndex = Array.from(childEl).indexOf(currentTab);
                 let tabIndex = [...childEl].indexOf(currentTab);
-                console.log(currentTab,childEl,tabIndex,TAB_CONTENT);
+                console.log(currentTab, childEl, tabIndex, TAB_CONTENT);
 
-                if(currentCon) {
-                    currentCon.classList.remove('on');
-                }else {
-                    TAB_CONTENT[0].classList.remove('on');
-                    TAB_MENU.children[0].classList.remove('on');
-                }
+                currentCon
+                    ? currentCon.classList.remove('on')
+                    : (TAB_CONTENT[0].classList.remove('on'),TAB_MENU.children[0].classList.remove('on'));
+
                 TAB_CONTENT[tabIndex].classList.add('on');
                 currentCon = TAB_CONTENT[tabIndex];
 
-                if(currentMenu) {
-                    currentMenu.classList.remove('on');
-                }
+                currentMenu
+                    ? currentMenu.classList.remove('on')
+                    : false;
                 currentTab.classList.add('on');
                 currentMenu = currentTab;
-                
+
             }
 
-            TAB_MENU.addEventListener('click',tabClickHandler,false);
+            TAB_MENU.addEventListener('click', tabClickHandler, false);
 
             // var arr = Array.prototype.slice.call( htmlCollection );
             // var arr = [].slice.call(htmlCollection);

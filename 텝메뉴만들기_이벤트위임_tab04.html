@@ -46,36 +46,36 @@
             const TAB_CONTENT = document.querySelectorAll('#tab_content>div');
 
             const tabClickHandler = e => {
-                
+
                 let currentTab = e.target;
                 let childEl = currentTab.parentElement.children;
-//HTMLCollection은 문서 내에 순서대로 정렬된 노드의 컬렉션으로, 유사 배열입니다. 
-//HTMLCollection을 얻을 수 있는 간단한 방법은 HTML 엘리먼트의 children 프로퍼티에 접근하는 것입니다.
-// 유사 배열이기 때문에, 배열에서 제공하는 모든 메서드를 가지고 있지 않습니다.
-// .forEach나 .map을 사용하려고 하면 해당 메서드가 존재하지 않는다는 오류가 발생합니다. 
-// 배열 구조분나 Array.from()으로 HTMLCollection으로부터 배열을 생성해서 해당 메서드를 사용할 수 있습니다.
-//let tabIndex = Array.from(childEl).indexOf(currentTab);
+                //HTMLCollection은 문서 내에 순서대로 정렬된 노드의 컬렉션으로, 유사 배열입니다. 
+                //HTMLCollection을 얻을 수 있는 간단한 방법은 HTML 엘리먼트의 children 프로퍼티에 접근하는 것입니다.
+                // 유사 배열이기 때문에, 배열에서 제공하는 모든 메서드를 가지고 있지 않습니다.
+                // .forEach나 .map을 사용하려고 하면 해당 메서드가 존재하지 않는다는 오류가 발생합니다. 
+                // 배열 구조분나 Array.from()으로 HTMLCollection으로부터 배열을 생성해서 해당 메서드를 사용할 수 있습니다.
+                //let tabIndex = Array.from(childEl).indexOf(currentTab);
                 let tabIndex = [...childEl].indexOf(currentTab);
-                console.log(currentTab,childEl,tabIndex,TAB_CONTENT);
+                console.log(currentTab, childEl, tabIndex, TAB_CONTENT);
 
-                if(currentCon) {
+                if (currentCon) {
                     currentCon.classList.remove('on');
-                }else {
+                } else {
                     TAB_CONTENT[0].classList.remove('on');
                     TAB_MENU.children[0].classList.remove('on');
                 }
                 TAB_CONTENT[tabIndex].classList.add('on');
                 currentCon = TAB_CONTENT[tabIndex];
 
-                if(currentMenu) {
+                if (currentMenu) {
                     currentMenu.classList.remove('on');
                 }
                 currentTab.classList.add('on');
                 currentMenu = currentTab;
-                
+
             }
 
-            TAB_MENU.addEventListener('click',tabClickHandler,false);
+            TAB_MENU.addEventListener('click', tabClickHandler, false);
 
             // var arr = Array.prototype.slice.call( htmlCollection );
             // var arr = [].slice.call(htmlCollection);

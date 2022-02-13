@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="string">
+        leechanghun
+    </div>
+    <script>
+        const NAME_MY = document.querySelector('.string');
+        const NAME_TEXT = NAME_MY.innerText;
+        //const NAME_TEXT = NAME_MY.textContent; node 공백을 포함하여 다 가져옴.
+        const STRING_SPLIT = [...NAME_TEXT];
+        //const STRING_SPLIT = NAME_MY.split('');
+        console.log(STRING_SPLIT);
+        NAME_MY.innerHTML = '';
+        STRING_SPLIT.map(el => { NAME_MY.innerHTML += '<span>' + el });
+
+        const RE_TEXT = [...NAME_MY.children];
+        console.log(RE_TEXT);
+
+        RE_TEXT.forEach((el, idx) => {
+            el.style.cssText = `
+            color:#f00;
+            opacity:0.${idx};
+            `
+        })
+
+    </script>
+</body>
+
+</html>
