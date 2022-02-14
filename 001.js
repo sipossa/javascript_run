@@ -1,5 +1,3 @@
-console.log('bab');
+import {sayName} from './sayName.js';
 
-const bab = () => console.log('bab2');
-
-bab();
+sayName('이창훈');
