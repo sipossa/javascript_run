@@ -28,7 +28,6 @@ import './App.css';
 
 class App extends Component {
   render(){
-    return (
       <div className="App">
         Hello
         <input type="button" value="get data" onClick={
