@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form name="라면자판기">
+        <input type="radio" name="라면종류" id="신라면" value="신라면">
+        <label for="신라면">신라면</label>
+        <input type="radio" name="라면종류" id="진라면" value="진라면">
+        <label for="진라면">진라면</label>
+        <button id="누르기버튼">라면주셈!!!!</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        const 라면끓이기 = (a, b, c) => {
+            let 끓인라면 = `${a} 면발에 ${b}의 칼칼함에 ${c}을 더한 라면...`;
+            document.querySelector('#result').innerHTML = 끓인라면;
+        }
+
+        console.log(document.forms.라면자판기);
+        document.querySelector('#누르기버튼').addEventListener('click', e => {
+            e.preventDefault();
+            console.log(document.forms.라면자판기.라면종류.value);
+            라면끓이기(document.forms.라면자판기.라면종류.value, '신라면스프', '계란');
+        })
+    </script>
+</body>
+
+</html>

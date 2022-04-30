@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프래드연산자_매개변수_덧셈</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        const 덧셈 = (...변수들) => {
+            let 숫자 = 0;
+            for (item of 변수들) {
+                숫자 += item
+            }
+            //console.log(숫자)
+            document.getElementById('result').innerHTML = 숫자;
+        }
+
+        덧셈(1, 2, 3, 100);
+    </script>
+</body>
+
+</html>
