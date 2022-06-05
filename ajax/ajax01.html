@@ -53,21 +53,32 @@
     </div>
 
     <script>
+        console.log(1)
         $.ajax({
             url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=Gluten+Free&product_type=bronzer',
             dataType: 'json',
         }).done(function (data) {
             var da = data
-            .slice(0, 10) //배열의 일정 부분 자르기 목록도 만들 수 이겠는 걸????
-            .map(el => `
+                .slice(2, 10) //배열의 일정 부분 자르기 목록도 만들 수 이겠는 걸????
+                .map(el =>
+                    `
             <li> 
                 <figure>
                 <img src=${el.image_link} alt=${el.name}>
                 </figure>
                 <p> ${el.name} </p> 
-            </li>`)
+            </li>
+            `
+                );
+
+
             $('#data-insert ul').html(da);
-        })
+
+            console.log(2)
+        });
+
+        $('#data-insert li').css({ color: "blue" });
+        console.log(3)
     </script>
 </body>
 
