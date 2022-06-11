@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://learnjs.vlpt.us/useful/07-spread-and-rest.html -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+
+<title>07. spread 와 rest 문법 · GitBook</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="generator" content="GitBook 3.2.3">
+<link rel="stylesheet" href="./07. spread 와 rest 문법 · GitBook_files/style.css">
+<link rel="stylesheet" href="./07. spread 와 rest 문법 · GitBook_files/collapsible-chapters.css">
+<link rel="stylesheet" href="./07. spread 와 rest 문법 · GitBook_files/website.css">
+<link rel="stylesheet" href="./07. spread 와 rest 문법 · GitBook_files/search.css">
+<link rel="stylesheet" href="./07. spread 와 rest 문법 · GitBook_files/website(1).css">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://learnjs.vlpt.us/useful/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="https://learnjs.vlpt.us/useful/gitbook/images/favicon.ico" type="image/x-icon">
+
+<style data-emotion="css" data-s=""></style><link rel="prev" href="https://learnjs.vlpt.us/useful/06-destructuring.html"><link rel="next" href="https://learnjs.vlpt.us/useful/08-scope.html"></head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search">
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li class="chapter expanded" data-level="1.1" data-path="../">
+<a href="https://learnjs.vlpt.us/">
+벨로퍼트와 함께하는 모던 자바스크립트
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2" data-path="../basics/">
+<a href="https://learnjs.vlpt.us/basics/">
+1장. 자바스크립트 입문
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.2.1" data-path="../basics/01-hello-javascript.html">
+<a href="https://learnjs.vlpt.us/basics/01-hello-javascript.html">
+01. Hello JavaScript
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.2" data-path="../basics/02-variables.html">
+<a href="https://learnjs.vlpt.us/basics/02-variables.html">
+02. 변수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.3" data-path="../basics/03-operator.html">
+<a href="https://learnjs.vlpt.us/basics/03-operator.html">
+03. 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.4" data-path="../basics/04-conditions.html">
+<a href="https://learnjs.vlpt.us/basics/04-conditions.html">
+04. 조건문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.5" data-path="../basics/05-function.html">
+<a href="https://learnjs.vlpt.us/basics/05-function.html">
+05. 함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.6" data-path="../basics/06-object.html">
+<a href="https://learnjs.vlpt.us/basics/06-object.html">
+06. 객체
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.7" data-path="../basics/07-array.html">
+<a href="https://learnjs.vlpt.us/basics/07-array.html">
+07. 배열
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.8" data-path="../basics/08-loop.html">
+<a href="https://learnjs.vlpt.us/basics/08-loop.html">
+08. 반복문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.9" data-path="../basics/09-array-functions.html">
+<a href="https://learnjs.vlpt.us/basics/09-array-functions.html">
+09. 배열 내장함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.10" data-path="../basics/10-prototype-class.html">
+<a href="https://learnjs.vlpt.us/basics/10-prototype-class.html">
+10. 프로토타입과 클래스
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.3" data-path="./">
+<a href="https://learnjs.vlpt.us/useful/">
+2장. 알고있으면 유용한 자바스크립트 문법
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.3.1" data-path="01-ternary.html">
+<a href="https://learnjs.vlpt.us/useful/01-ternary.html">
+01. 삼항 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.2" data-path="02-truthy-and-falsy.html">
+<a href="https://learnjs.vlpt.us/useful/02-truthy-and-falsy.html">
+02. Truthy and Falsy
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.3" data-path="03-short-circuiting.html">
+<a href="https://learnjs.vlpt.us/useful/03-short-circuiting.html">
+03. 단축 평가 논리 계산법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.4" data-path="04-default-function-params.html">
+<a href="https://learnjs.vlpt.us/useful/04-default-function-params.html">
+04. 함수의 기본 파라미터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.5" data-path="05-smarter-conditions.html">
+<a href="https://learnjs.vlpt.us/useful/05-smarter-conditions.html">
+05. 조건문 더 스마트하게 쓰기
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.6" data-path="06-destructuring.html">
+<a href="https://learnjs.vlpt.us/useful/06-destructuring.html">
+06. 비구조화 할당 (구조 분해) 문법
+</a>
+</li>
+<li class="chapter active expanded" data-level="1.3.7" data-path="07-spread-and-rest.html">
+<a href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html">
+07. spread 와 rest 문법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.8" data-path="08-scope.html">
+<a href="https://learnjs.vlpt.us/useful/08-scope.html">
+08. scope 의 이해
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.4" data-path="../async/">
+<a href="https://learnjs.vlpt.us/async/">
+3장. 자바스크립트에서 비동기 처리 다루기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.4.1" data-path="../async/01-promise.html">
+<a href="https://learnjs.vlpt.us/async/01-promise.html">
+01. Promise
+</a>
+</li>
+<li class="chapter expanded" data-level="1.4.2" data-path="../async/02-async-await.html">
+<a href="https://learnjs.vlpt.us/async/02-async-await.html">
+02. async/await
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.5" data-path="../html/">
+<a href="https://learnjs.vlpt.us/html/">
+4장. HTML 과 JavaScript 연동하기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.5.1" data-path="../html/01-counter.html">
+<a href="https://learnjs.vlpt.us/html/01-counter.html">
+01. 카운터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.5.2" data-path="../html/02-modal.html">
+<a href="https://learnjs.vlpt.us/html/02-modal.html">
+02. 모달
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.6" data-path="../CONCLUSION.html">
+<a href="https://learnjs.vlpt.us/CONCLUSION.html">
+마무리
+</a>
+</li>
+<li class="chapter expanded" data-level="1.7" data-path="../reference.html">
+<a href="https://learnjs.vlpt.us/reference.html">
+참고 문헌
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="https://www.gitbook.com/" target="blank" class="gitbook-link" style="display: none;">
+Published with GitBook
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-github"></i></a><a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-edit"></i> 수정 요청하기</a><div class="dropdown pull-right js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Share" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-5 ">Facebook</button><button class="button size-5 ">Google+</button><button class="button size-5 ">Twitter</button><button class="button size-5 ">Weibo</button><button class="button size-5 ">Instapaper</button></div></div></div><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-facebook"></i></a><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-twitter"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="https://learnjs.vlpt.us/">07. spread 와 rest 문법</a>
+</h1>
+</div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<h2 id="07-spread-와-rest">07. spread 와 rest</h2>
+<p>이번에는 ES6 에서 도입된 spread 와 rest 문법에 대해서 알아보겠습니다. 서로 완전히 다른 문법인데요, 은근히 좀 비슷합니다.</p>
+<h3 id="spread">spread</h3>
+<p>일단 spread 문법부터 알아봅시다. spread 라는 단어가 가지고 있는 의미는 펼치다, 퍼뜨리다 입니다. 이 문법을 사용하면, 객체 혹은 배열을 펼칠수있습니다.</p>
+<p>예를 들어서 다음과 같은 객체들이 있다고 가정해봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> slime = {
+  name: <span class="hljs-string">'슬라임'</span>
+};
+
+<span class="hljs-keyword">const</span> cuteSlime = {
+  name: <span class="hljs-string">'슬라임'</span>,
+  attribute: <span class="hljs-string">'cute'</span>
+};
+
+<span class="hljs-keyword">const</span> purpleCuteSlime = {
+  name: <span class="hljs-string">'슬라임'</span>,
+  attribute: <span class="hljs-string">'cute'</span>,
+  color: <span class="hljs-string">'purple'</span>
+};
+
+<span class="hljs-built_in">console</span>.log(slime);
+<span class="hljs-built_in">console</span>.log(cuteSlime);
+<span class="hljs-built_in">console</span>.log(purpleCuteSlime);
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/XeRXMXb.png" alt=""></p>
+<p>이 코드에서는 먼저 slime 이라는 객체를 선언했습니다. 그리고 cuteSlime 이라는 객체를 만들었는데요, 기존에 선언한 slime 을 건들이지 않고 새로운 객체를 만들어서 slime 이 가지고 있는 값을 그대로 사용하였습니다.</p>
+<p>그 다음에는 purpleCuteSlime 이라는 객체를 만들었는데요, 이 객체는 cuteSlime 이 가지고 있는 속성을 그대로 사용하면서 추가적으로 color 가 추가되었습니다.</p>
+<p>위 코드에서의 핵심은, 기존의 것을 건들이지 않고, 새로운 객체를 만든다는 것 인데요, 이러한 상황에 사용 할 수 있는 유용한 문법이 spread 입니다.</p>
+<p>아까 코드는 spread 문법을 사용하면 다음과 같이 작성 할 수 있습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> slime = {
+  name: <span class="hljs-string">'슬라임'</span>
+};
+
+<span class="hljs-keyword">const</span> cuteSlime = {
+  ...slime,
+  attribute: <span class="hljs-string">'cute'</span>
+};
+
+<span class="hljs-keyword">const</span> purpleCuteSlime = {
+  ...cuteSlime,
+  color: <span class="hljs-string">'purple'</span>
+};
+
+<span class="hljs-built_in">console</span>.log(slime);
+<span class="hljs-built_in">console</span>.log(cuteSlime);
+<span class="hljs-built_in">console</span>.log(purpleCuteSlime);
+</code></pre>
+<p>여기서 사용한 ... 문자가 바로 spread 연산자입니다.</p>
+<p>spread 연산자는 배열에서도 사용 할 수 있습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> animals = [<span class="hljs-string">'개'</span>, <span class="hljs-string">'고양이'</span>, <span class="hljs-string">'참새'</span>];
+<span class="hljs-keyword">const</span> anotherAnimals = [...animals, <span class="hljs-string">'비둘기'</span>];
+<span class="hljs-built_in">console</span>.log(animals);
+<span class="hljs-built_in">console</span>.log(anotherAnimals);
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/Z8t1wEt.png" alt=""></p>
+<p>기존의 animals 는 건드리지 않으면서, 새로운 anotherAnimals 배열에 animals 가 가지고 있는 내용을 모두 집어넣고, '비둘기' 라는 항목을 추가적으로 넣었습니다.</p>
+<p>배열에서 spread 연산자를 여러번 사용 할 수도 있습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+<span class="hljs-keyword">const</span> spreadNumbers = [...numbers, <span class="hljs-number">1000</span>, ...numbers];
+<span class="hljs-built_in">console</span>.log(spreadNumbers); <span class="hljs-comment">// [1, 2, 3, 4, 5, 1000, 1, 2, 3, 4, 5]</span>
+</code></pre>
+<h3 id="rest">rest</h3>
+<p>rest는 생김새는 spread 랑 비슷한데, 역할이 매우 다릅니다.</p>
+<p>rest는 객체, 배열, 그리고 함수의 파라미터에서 사용이 가능합니다.</p>
+<h4 id="객체에서의-rest">객체에서의 rest</h4>
+<p>우선 객체에서의 예시를 알아볼까요?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> purpleCuteSlime = {
+  name: <span class="hljs-string">'슬라임'</span>,
+  attribute: <span class="hljs-string">'cute'</span>,
+  color: <span class="hljs-string">'purple'</span>
+};
+
+<span class="hljs-keyword">const</span> { color, ...rest } = purpleCuteSlime;
+<span class="hljs-built_in">console</span>.log(color);
+<span class="hljs-built_in">console</span>.log(rest);
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/XYg74q3.png" alt=""></p>
+<p>rest 안에 name 값을 제외한 값이 들어있습니다. </p>
+<p>rest 는 객체와 배열에서 사용 할 때는 이렇게 비구조화 할당 문법과 함께 사용됩니다. 주로 사용 할때는 위와 같이 rest 라는 키워드를 사용하게 되는데요, 추출한 값의 이름이 꼭 rest 일 필요는 없습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> purpleCuteSlime = {
+  name: <span class="hljs-string">'슬라임'</span>,
+  attribute: <span class="hljs-string">'cute'</span>,
+  color: <span class="hljs-string">'purple'</span>
+};
+
+<span class="hljs-keyword">const</span> { color, ...cuteSlime } = purpleCuteSlime;
+<span class="hljs-built_in">console</span>.log(color);
+<span class="hljs-built_in">console</span>.log(cuteSlime);
+</code></pre>
+<p>이렇게 해도 무방합니다.</p>
+<p>이어서, attribute 까지 없앤 새로운 객체를 만들고 싶다면 이렇게 해주면 되겠죠.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> purpleCuteSlime = {
+  name: <span class="hljs-string">'슬라임'</span>,
+  attribute: <span class="hljs-string">'cute'</span>,
+  color: <span class="hljs-string">'purple'</span>
+};
+
+<span class="hljs-keyword">const</span> { color, ...cuteSlime } = purpleCuteSlime;
+<span class="hljs-built_in">console</span>.log(color);
+<span class="hljs-built_in">console</span>.log(cuteSlime);
+
+<span class="hljs-keyword">const</span> { attribute, ...slime } = cuteSlime;
+<span class="hljs-built_in">console</span>.log(attribute);
+<span class="hljs-built_in">console</span>.log(slime);
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/ejvAHKJ.png" alt=""></p>
+<h4 id="배열에서의-rest">배열에서의 rest</h4>
+<p>다음, 배열에서의 사용 예시를 알아봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">const</span> [one, ...rest] = numbers;
+
+<span class="hljs-built_in">console</span>.log(one);
+<span class="hljs-built_in">console</span>.log(rest);
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/tEpTlMQ.png" alt=""></p>
+<p>배열 비구조화 할당을 통하여 원하는 값을 밖으로 꺼내고, 나머지 값을 rest 안에 넣었습니다.</p>
+<p>반면 이렇게 할 수는 없답니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">const</span> [..rest, last] = numbers;
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/E9dyzir.png" alt=""></p>
+<h4 id="함수-파라미터에서의-rest">함수 파라미터에서의 rest</h4>
+<p>rest 를 함수파라미터에서 사용 할 수도 있습니다. 예를 들어서 우리가 파라미터로 넣어준 모든 값들을 합해주는 함수를 만들어주고 싶다고 가정해봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">a, b, c, d, e, f, g</span>) </span>{
+  <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">if</span> (a) sum += a;
+  <span class="hljs-keyword">if</span> (b) sum += b;
+  <span class="hljs-keyword">if</span> (c) sum += c;
+  <span class="hljs-keyword">if</span> (d) sum += d;
+  <span class="hljs-keyword">if</span> (e) sum += e;
+  <span class="hljs-keyword">if</span> (f) sum += f;
+  <span class="hljs-keyword">if</span> (g) sum += g;
+  <span class="hljs-keyword">return</span> sum;
+}
+
+<span class="hljs-keyword">const</span> result = sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<p>위에서의 sum 함수는 7개의 파라미터를 받아오는데, 아래에서 사용 할때에는 6개만 넣어줬습니다. 그러면, g 값이 undefined 가 되기 때문에 sum 에 더하는 과정에서 += undefined 를 하게 되면 결과는 NaN 이 되버립니다. 그렇기 때문에 함수에서 하나하나 유효한 값인지 확인을 해줬지요.</p>
+<p>함수의 파라미터가 몇개가 될 지 모르는 상황에서 rest 파라미터를 사용하면 매우 유용합니다. 코드를 다음과 같이 수정해보세요.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">...rest</span>) </span>{
+  <span class="hljs-keyword">return</span> rest;
+}
+
+<span class="hljs-keyword">const</span> result = sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<p><img src="./07. spread 와 rest 문법 · GitBook_files/Pvm0tha.png" alt=""></p>
+<p>result 가 가르키고 있는 것은 함수에서 받아온 파라미터들로 이루어진 배열입니다. 우리가 이제 파라미터들이 들어가있는 배열을 받았으니, 그냥 모두 더해주면 되겠죠?</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">...rest</span>) </span>{
+  <span class="hljs-keyword">return</span> rest.reduce((acc, current) =&gt; acc + current, <span class="hljs-number">0</span>);
+}
+
+<span class="hljs-keyword">const</span> result = sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// 21</span>
+</code></pre>
+<p>여기서 reduce 함수가 사용 됐는데, reduce 를 잘 모르겠으면 <a href="https://learnjs.vlpt.us/basics/09-array-functions.html#reduce" target="_blank">1장 섹션 9</a>를 복습하고 오세요.</p>
+<h3 id="함수-인자와-spread">함수 인자와 spread</h3>
+<p>이번에는, 다시 아까 배웠던 spread 로 돌아와서 한가지를 더 가르쳐드리겠습니다. 바로 함수의 인자와 spread 인데요, 만약 프로그래밍을 처음 배우신다면 파라미터와 인자가 좀 헷갈릴 수 있습니다. 이에 대해서 간단하게 설명 드려볼게요.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> myFunction(a) { <span class="hljs-comment">// 여기서 a 는 파라미터</span>
+  <span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// 여기서 a 는 인자</span>
+}
+
+myFunction(<span class="hljs-string">'hello world'</span>); <span class="hljs-comment">// 여기서 'hello world' 는 인자</span>
+</code></pre>
+<p>함수에서 값을 읽을때, 그 값들은 파라미터라고 부릅니다.
+그리고 함수에서 값을 넣어줄 때, 그 값들은 인자라고 부릅니다.</p>
+<p>인자가 무엇인지 이해를 하셨다면 이제 함수인자와 spread 문법을 사용하는 것에 대하여 알아볼게요.</p>
+<p>우리가 방금 함수파라미터와 rest 를 사용한 것과 비슷한데, 반대의 역할입니다. 예를 들어서, 우리가 배열 안에 있는 원소들을 모두 파라미터로 넣어주고 싶다고 가정해보겠습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">...rest</span>) </span>{
+  <span class="hljs-keyword">return</span> rest.reduce((acc, current) =&gt; acc + current, <span class="hljs-number">0</span>);
+}
+
+<span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">const</span> result = sum(
+  numbers[<span class="hljs-number">0</span>],
+  numbers[<span class="hljs-number">1</span>],
+  numbers[<span class="hljs-number">2</span>],
+  numbers[<span class="hljs-number">3</span>],
+  numbers[<span class="hljs-number">4</span>],
+  numbers[<span class="hljs-number">5</span>]
+);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<p>굉장히 불편하죠? 만약에 sum함수를 사용 할 때 인자 부분에서 spread 를 사용하면 다음과 같이 표현이 가능합니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">...rest</span>) </span>{
+  <span class="hljs-keyword">return</span> rest.reduce((acc, current) =&gt; acc + current, <span class="hljs-number">0</span>);
+}
+
+<span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">const</span> result = sum(...numbers);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<p>어떤가요? 정말 편하죠?</p>
+<p>이렇게, spread 와 rest 를 잘 사용하면 앞으로 보기 깔끔한 코드를 작성하는 것에 큰 도움을 줄 것입니다.</p>
+<h3 id="퀴즈">퀴즈</h3>
+<p>함수에 n 개의 숫자들이 파라미터로 주어졌을 때, 그 중 가장 큰 값을 알아내세요.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">max</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">const</span> result = max(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<p><a href="https://codesandbox.io/s/gifted-davinci-qxqzn?fontsize=14" target="_blank"><img src="./07. spread 와 rest 문법 · GitBook_files/play-codesandbox.svg" alt="Edit gifted-davinci-qxqzn"></a></p>
+<p>위 CodeSandbox 링크에서 우측에 뜨는 Tests 를 통과시키시면 됩니다.</p>
+<p><a href="https://codesandbox.io/s/silly-napier-pippm" target="_blank">정답</a></p>
+<script>
+      function attachComments() {
+        const el = document.querySelector('.markdown-section');
+        if (!el) return;
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'velopert/learnjs');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('label', 'comments');
+        el.appendChild(script);
+      }
+      setTimeout(attachComments, 100);
+    </script>
+<div class="utterances">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./07. spread 와 rest 문법 · GitBook_files/utterances.html" loading="lazy"></iframe>
+  </div></section>
+</div>
+<div class="search-results">
+<div class="has-results">
+ <h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="https://learnjs.vlpt.us/useful/06-destructuring.html" class="navigation navigation-prev " aria-label="Previous page: 06. 비구조화 할당 (구조 분해) 문법">
+<i class="fa fa-angle-left"></i>
+</a>
+<a href="https://learnjs.vlpt.us/useful/08-scope.html" class="navigation navigation-next " aria-label="Next page: 08. scope 의 이해" style="margin-right: 17px;">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07. spread 와 rest 문법","level":"1.3.7","depth":2,"next":{"title":"08. scope 의 이해","level":"1.3.8","depth":2,"path":"useful/08-scope.md","ref":"./useful/08-scope.md","articles":[]},"previous":{"title":"06. 비구조화 할당 (구조 분해) 문법","level":"1.3.6","depth":2,"path":"useful/06-destructuring.md","ref":"./useful/06-destructuring.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","comment","hide-published-with","github","edit-link"],"pluginsConfig":{"github":{"url":"https://github.com/velopert/learnjs"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"수정 요청하기","base":"https://github.com/velopert/learnjs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"comment":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"useful/07-spread-and-rest.md","mtime":"2019-05-18T06:24:17.249Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T12:51:25.214Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+<script src="./07. spread 와 rest 문법 · GitBook_files/gitbook.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/theme.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/collapsible-chapters.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/plugin.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/plugin.js(1).다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/plugin.js(2).다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/search-engine.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/search.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/lunr.min.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/search-lunr.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/buttons.js.다운로드"></script>
+<script src="./07. spread 와 rest 문법 · GitBook_files/fontsettings.js.다운로드"></script>
+
+
+<div id="__endic_crx__"><div class="css-1abc5oq"></div></div></body></html>

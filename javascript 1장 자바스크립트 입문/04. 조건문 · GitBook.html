@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://learnjs.vlpt.us/basics/04-conditions.html -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+
+<title>04. 조건문 · GitBook</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="generator" content="GitBook 3.2.3">
+<link rel="stylesheet" href="./04. 조건문 · GitBook_files/style.css">
+<link rel="stylesheet" href="./04. 조건문 · GitBook_files/collapsible-chapters.css">
+<link rel="stylesheet" href="./04. 조건문 · GitBook_files/website.css">
+<link rel="stylesheet" href="./04. 조건문 · GitBook_files/search.css">
+<link rel="stylesheet" href="./04. 조건문 · GitBook_files/website(1).css">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://learnjs.vlpt.us/basics/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="https://learnjs.vlpt.us/basics/gitbook/images/favicon.ico" type="image/x-icon">
+
+<style data-emotion="css" data-s=""></style><link rel="prev" href="https://learnjs.vlpt.us/basics/03-operator.html"><link rel="next" href="https://learnjs.vlpt.us/basics/05-function.html"></head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search">
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li class="chapter expanded" data-level="1.1" data-path="../">
+<a href="https://learnjs.vlpt.us/">
+벨로퍼트와 함께하는 모던 자바스크립트
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2" data-path="./">
+<a href="https://learnjs.vlpt.us/basics/">
+1장. 자바스크립트 입문
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.2.1" data-path="01-hello-javascript.html">
+<a href="https://learnjs.vlpt.us/basics/01-hello-javascript.html">
+01. Hello JavaScript
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.2" data-path="02-variables.html">
+<a href="https://learnjs.vlpt.us/basics/02-variables.html">
+02. 변수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.3" data-path="03-operator.html">
+<a href="https://learnjs.vlpt.us/basics/03-operator.html">
+03. 연산자
+</a>
+</li>
+<li class="chapter active expanded" data-level="1.2.4" data-path="04-conditions.html">
+<a href="https://learnjs.vlpt.us/basics/04-conditions.html">
+04. 조건문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.5" data-path="05-function.html">
+<a href="https://learnjs.vlpt.us/basics/05-function.html">
+ 05. 함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.6" data-path="06-object.html">
+<a href="https://learnjs.vlpt.us/basics/06-object.html">
+06. 객체
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.7" data-path="07-array.html">
+<a href="https://learnjs.vlpt.us/basics/07-array.html">
+07. 배열
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.8" data-path="08-loop.html">
+<a href="https://learnjs.vlpt.us/basics/08-loop.html">
+08. 반복문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.9" data-path="09-array-functions.html">
+<a href="https://learnjs.vlpt.us/basics/09-array-functions.html">
+09. 배열 내장함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.10" data-path="10-prototype-class.html">
+<a href="https://learnjs.vlpt.us/basics/10-prototype-class.html">
+10. 프로토타입과 클래스
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.3" data-path="../useful/">
+<a href="https://learnjs.vlpt.us/useful/">
+2장. 알고있으면 유용한 자바스크립트 문법
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter " data-level="1.3.1" data-path="../useful/01-ternary.html">
+<a href="https://learnjs.vlpt.us/useful/01-ternary.html">
+01. 삼항 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.2" data-path="../useful/02-truthy-and-falsy.html">
+<a href="https://learnjs.vlpt.us/useful/02-truthy-and-falsy.html">
+02. Truthy and Falsy
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.3" data-path="../useful/03-short-circuiting.html">
+<a href="https://learnjs.vlpt.us/useful/03-short-circuiting.html">
+03. 단축 평가 논리 계산법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.4" data-path="../useful/04-default-function-params.html">
+<a href="https://learnjs.vlpt.us/useful/04-default-function-params.html">
+04. 함수의 기본 파라미터
+</a>
+</li>
+<li class="chapter " data-level="1.3.5" data-path="../useful/05-smarter-conditions.html">
+<a href="https://learnjs.vlpt.us/useful/05-smarter-conditions.html">
+05. 조건문 더 스마트하게 쓰기
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.6" data-path="../useful/06-destructuring.html">
+<a href="https://learnjs.vlpt.us/useful/06-destructuring.html">
+06. 비구조화 할당 (구조 분해) 문법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.7" data-path="../useful/07-spread-and-rest.html">
+<a href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html">
+07. spread 와 rest 문법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.8" data-path="../useful/08-scope.html">
+<a href="https://learnjs.vlpt.us/useful/08-scope.html">
+08. scope 의 이해
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.4" data-path="../async/">
+<a href="https://learnjs.vlpt.us/async/">
+3장. 자바스크립트에서 비동기 처리 다루기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.4.1" data-path="../async/01-promise.html">
+<a href="https://learnjs.vlpt.us/async/01-promise.html">
+01. Promise
+</a>
+</li>
+<li class="chapter expanded" data-level="1.4.2" data-path="../async/02-async-await.html">
+<a href="https://learnjs.vlpt.us/async/02-async-await.html">
+02. async/await
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.5" data-path="../html/">
+<a href="https://learnjs.vlpt.us/html/">
+4장. HTML 과 JavaScript 연동하기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.5.1" data-path="../html/01-counter.html">
+<a href="https://learnjs.vlpt.us/html/01-counter.html">
+01. 카운터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.5.2" data-path="../html/02-modal.html">
+<a href="https://learnjs.vlpt.us/html/02-modal.html">
+02. 모달
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.6" data-path="../CONCLUSION.html">
+<a href="https://learnjs.vlpt.us/CONCLUSION.html">
+마무리
+</a>
+</li>
+<li class="chapter expanded" data-level="1.7" data-path="../reference.html">
+<a href="https://learnjs.vlpt.us/reference.html">
+참고 문헌
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="https://www.gitbook.com/" target="blank" class="gitbook-link" style="display: none;">
+Published with GitBook
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-github"></i></a><a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-edit"></i> 수정 요청하기</a><div class="dropdown pull-right js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Share" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-5 ">Facebook</button><button class="button size-5 ">Google+</button><button class="button size-5 ">Twitter</button><button class="button size-5 ">Weibo</button><button class="button size-5 ">Instapaper</button></div></div></div><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-facebook"></i></a><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-twitter"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" href="https://learnjs.vlpt.us/basics/04-conditions.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="https://learnjs.vlpt.us/">04. 조건문</a>
+</h1>
+</div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<h2 id="04-조건문">04. 조건문</h2>
+<p>조건문을 사용하면 특정 조건이 만족됐을 때 특정 코드를 실행할 수 있습니다.</p>
+<h3 id="if-문">if 문</h3>
+<p>가장 기본적인 조건문은 if 문입니다.</p>
+<p>if문은, "~~하다면 ~~를 해라" 를 의미합니다.</p>
+<p>예시 코드를 한번 봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">if</span> (a + <span class="hljs-number">1</span> === <span class="hljs-number">2</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a + 1 이 2 입니다.'</span>);
+}
+</code></pre>
+<p>결과는, "a + 1 이 2 입니다." 이 출력됩니다.</p>
+<p>하지만, 만약에 여기서 a 를 0 으로 바꾼다면 어떨까요?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">if</span> (a + <span class="hljs-number">1</span> === <span class="hljs-number">2</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a + 1 이 2 입니다.'</span>);
+}
+</code></pre>
+<p>결과는, 아무것도 출력되지 않습니다.</p>
+<p>if문을 사용하면, 이렇게 특정 조건이 만족 될 때에만 특정 코드를 실행 시킬 수 있습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (조건) {
+  코드;
+}
+</code></pre>
+<p>조건이 만족됐을 때 실행시킬 코드가 <code>{ }</code> 로 감싸져있는데요, 이를 코드 블록이라고 합니다.</p>
+<p>만약에 조건이 true 가 된다면 우리가 지정한 코드가 실행되는 것이고, false 가 된다면 코드가 실행되지 않습니다.</p>
+<p>우리가 이전에 <code>let</code> 과 <code>const</code> 를 배울 때, 다른 블록 범위에서는 똑같은 이름으로 선언 할 수도 있다고 배웠었습니다.</p>
+<p>다음 코드를 한번 실행해보세요.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+  <span class="hljs-keyword">const</span> a = <span class="hljs-number">2</span>;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'if문 안의 a 값은 '</span> + a);
+}
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'if문 밖의 a 값은 '</span> + a);
+</code></pre>
+<p>위 코드에서는 if문에 조건을 true 로 설정했기 때문에 코드 블록 내부의 코드가 무조건 실행이 됩니다.</p>
+<p>결과는 다음과 같습니다</p>
+<pre><code>"if문의 안의 a 값은 2"
+"if문 밖의 a 값은 1"
+</code></pre><h3 id="if-else-문">if-else 문</h3>
+<p>if-else문은 "~~하다면 ~~하고, 그렇지 않다면 ~~해라." 를 의미합니다.</p>
+<p>예시 코드를 볼까요?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">15</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a 가 15 큽니다.'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a 가 15보다 크지 않습니다.'</span>);
+}
+</code></pre>
+<p>위 코드의 결과는 다음과 같습니다.</p>
+<pre><code>"a 가 10보다 크지 않습니다."
+</code></pre><p>만약에 특정 조건이 만족할 때와 만족하지 않을 때 서로 다른 코드를 실행해야 된다면 if-else 구문을 사용 할 수 있습니다.</p>
+<h3 id="if-else-if-문">if-else if 문</h3>
+<p>if-else if 문은 여러 조건에 따라 다른 작업을 해야 할 때 사용합니다.</p>
+<p>예시 코드를 따라 적어보세요.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">if</span> (a === <span class="hljs-number">5</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'5입니다!'</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a === <span class="hljs-number">10</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'10입니다!'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'5도 아니고 10도 아닙니다.'</span>);
+}
+</code></pre>
+<p>결과는 다음과 같습니다.</p>
+<pre><code>"10입니다!"
+</code></pre><p>한번 a 값을 5로 바꾸고 실행해보고, 7 로 바꾸고 실행해보세요.</p>
+<pre><code>a = 5 -&gt; "5입니다!"
+a = 7 -&gt; "5도 아니고 10도 아닙니다."
+</code></pre><h3 id="switchcase-문">switch/case 문</h3>
+<p>switch/case 문은 특정 값이 무엇이냐에 따라 다른 작업을 하고 싶을 때 사용합니다.</p>
+<p>다음 예시 코드를 실행해보세요.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> device = <span class="hljs-string">'iphone'</span>;
+
+<span class="hljs-keyword">switch</span> (device) {
+  <span class="hljs-keyword">case</span> <span class="hljs-string">'iphone'</span>:
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'아이폰!'</span>);
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">'ipad'</span>:
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'아이패드!'</span>);
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">'galaxy note'</span>:
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'갤럭시 노트!'</span>);
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">default</span>:
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'모르겠네요..'</span>);
+}
+</code></pre>
+<p>device 값을 'iphone', 'ipad', 'galaxy note', 'macbook' 으로 순서대로 바꿔가면서 코드를 실행해보세요.</p>
+<p>device 값에 따라서 다른 결과가 출력되고 있나요?</p>
+<p>switch/case 문은 이와 같이 특정 값이 무엇이냐에 따라 다른 작업을 수행 할 수 있게 해줍니다.</p>
+<p>switch/case 문에서는 각 case 에서 실행할 코드를 작성하고 맨 마지막에 <code>break;</code> 를 해주어야 합니다. break 를 하지 않으면 그 다음 case 의 코드까지 실행해버립니다.</p>
+<p>그리고, 맨 아래의 <code>default:</code> 는 device 값이 우리가 case 로 준비하지 않은 값일 경우를 의미합니다.</p>
+<script>
+      function attachComments() {
+        const el = document.querySelector('.markdown-section');
+        if (!el) return;
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'velopert/learnjs');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('label', 'comments');
+        el.appendChild(script);
+      }
+      setTimeout(attachComments, 100);
+    </script>
+<div class="utterances">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./04. 조건문 · GitBook_files/utterances.html" loading="lazy"></iframe>
+  </div></section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="https://learnjs.vlpt.us/basics/03-operator.html" class="navigation navigation-prev " aria-label="Previous page: 03. 연산자">
+<i class="fa fa-angle-left"></i>
+ </a>
+<a href="https://learnjs.vlpt.us/basics/05-function.html" class="navigation navigation-next " aria-label="Next page: 05. 함수" style="margin-right: 17px;">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04. 조건문","level":"1.2.4","depth":2,"next":{"title":"05. 함수","level":"1.2.5","depth":2,"path":"basics/05-function.md","ref":"./basics/05-function.md","articles":[]},"previous":{"title":"03. 연산자","level":"1.2.3","depth":2,"path":"basics/03-operator.md","ref":"./basics/03-operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","comment","hide-published-with","github","edit-link"],"pluginsConfig":{"github":{"url":"https://github.com/velopert/learnjs"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"수정 요청하기","base":"https://github.com/velopert/learnjs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"comment":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/04-conditions.md","mtime":"2019-05-18T02:42:53.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T12:51:25.214Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+<script src="./04. 조건문 · GitBook_files/gitbook.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/theme.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/collapsible-chapters.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/plugin.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/plugin.js(1).다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/plugin.js(2).다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/search-engine.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/search.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/lunr.min.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/search-lunr.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/buttons.js.다운로드"></script>
+<script src="./04. 조건문 · GitBook_files/fontsettings.js.다운로드"></script>
+
+
+<div id="__endic_crx__"><div class="css-1abc5oq"></div></div></body></html>

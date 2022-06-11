@@ -1,0 +1,270 @@
+
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>2장. 알고있으면 유용한 자바스크립트 문법 · GitBook</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="">
+<meta name="generator" content="GitBook 3.2.3">
+<link rel="stylesheet" href="../gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+<link rel="next" href="01-ternary.html" />
+<link rel="prev" href="../basics/10-prototype-class.html" />
+</head>
+<body>
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search" />
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li class="chapter " data-level="1.1" data-path="../">
+<a href="../">
+벨로퍼트와 함께하는 모던 자바스크립트
+</a>
+</li>
+<li class="chapter " data-level="1.2" data-path="../basics/">
+<a href="../basics/">
+1장. 자바스크립트 입문
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.2.1" data-path="../basics/01-hello-javascript.html">
+<a href="../basics/01-hello-javascript.html">
+01. Hello JavaScript
+</a>
+</li>
+<li class="chapter " data-level="1.2.2" data-path="../basics/02-variables.html">
+<a href="../basics/02-variables.html">
+02. 변수
+</a>
+</li>
+<li class="chapter " data-level="1.2.3" data-path="../basics/03-operator.html">
+<a href="../basics/03-operator.html">
+03. 연산자
+</a>
+</li>
+<li class="chapter " data-level="1.2.4" data-path="../basics/04-conditions.html">
+<a href="../basics/04-conditions.html">
+04. 조건문
+</a>
+</li>
+<li class="chapter " data-level="1.2.5" data-path="../basics/05-function.html">
+<a href="../basics/05-function.html">
+05. 함수
+</a>
+</li>
+<li class="chapter " data-level="1.2.6" data-path="../basics/06-object.html">
+<a href="../basics/06-object.html">
+06. 객체
+</a>
+</li>
+<li class="chapter " data-level="1.2.7" data-path="../basics/07-array.html">
+<a href="../basics/07-array.html">
+07. 배열
+</a>
+</li>
+<li class="chapter " data-level="1.2.8" data-path="../basics/08-loop.html">
+<a href="../basics/08-loop.html">
+08. 반복문
+</a>
+</li>
+<li class="chapter " data-level="1.2.9" data-path="../basics/09-array-functions.html">
+<a href="../basics/09-array-functions.html">
+09. 배열 내장함수
+</a>
+</li>
+<li class="chapter " data-level="1.2.10" data-path="../basics/10-prototype-class.html">
+<a href="../basics/10-prototype-class.html">
+10. 프로토타입과 클래스
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter active" data-level="1.3" data-path="./">
+<a href="./">
+2장. 알고있으면 유용한 자바스크립트 문법
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.3.1" data-path="01-ternary.html">
+<a href="01-ternary.html">
+01. 삼항 연산자
+</a>
+</li>
+<li class="chapter " data-level="1.3.2" data-path="02-truthy-and-falsy.html">
+<a href="02-truthy-and-falsy.html">
+02. Truthy and Falsy
+</a>
+</li>
+<li class="chapter " data-level="1.3.3" data-path="03-short-circuiting.html">
+<a href="03-short-circuiting.html">
+03. 단축 평가 논리 계산법
+</a>
+</li>
+<li class="chapter " data-level="1.3.4" data-path="04-default-function-params.html">
+<a href="04-default-function-params.html">
+04. 함수의 기본 파라미터
+</a>
+</li>
+<li class="chapter " data-level="1.3.5" data-path="05-smarter-conditions.html">
+<a href="05-smarter-conditions.html">
+05. 조건문 더 스마트하게 쓰기
+</a>
+</li>
+<li class="chapter " data-level="1.3.6" data-path="06-destructuring.html">
+<a href="06-destructuring.html">
+ 06. 비구조화 할당 (구조 분해) 문법
+</a>
+</li>
+<li class="chapter " data-level="1.3.7" data-path="07-spread-and-rest.html">
+<a href="07-spread-and-rest.html">
+07. spread 와 rest 문법
+</a>
+</li>
+<li class="chapter " data-level="1.3.8" data-path="08-scope.html">
+<a href="08-scope.html">
+08. scope 의 이해
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.4" data-path="../async/">
+<a href="../async/">
+3장. 자바스크립트에서 비동기 처리 다루기
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.4.1" data-path="../async/01-promise.html">
+<a href="../async/01-promise.html">
+01. Promise
+</a>
+</li>
+<li class="chapter " data-level="1.4.2" data-path="../async/02-async-await.html">
+<a href="../async/02-async-await.html">
+02. async/await
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.5" data-path="../html/">
+<a href="../html/">
+4장. HTML 과 JavaScript 연동하기
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.5.1" data-path="../html/01-counter.html">
+<a href="../html/01-counter.html">
+01. 카운터
+</a>
+</li>
+<li class="chapter " data-level="1.5.2" data-path="../html/02-modal.html">
+<a href="../html/02-modal.html">
+02. 모달
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.6" data-path="../CONCLUSION.html">
+<a href="../CONCLUSION.html">
+마무리
+</a>
+</li>
+<li class="chapter " data-level="1.7" data-path="../reference.html">
+<a href="../reference.html">
+참고 문헌
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+Published with GitBook
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="..">2장. 알고있으면 유용한 자바스크립트 문법</a>
+</h1>
+</div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<h1 id="&#xC54C;&#xACE0;&#xC788;&#xC73C;&#xBA74;-&#xC720;&#xC6A9;&#xD55C;-&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;-&#xBB38;&#xBC95;">&#xC54C;&#xACE0;&#xC788;&#xC73C;&#xBA74; &#xC720;&#xC6A9;&#xD55C; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xBB38;&#xBC95;</h1>
+<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; &#xC54C;&#xACE0;&#xC788;&#xC73C;&#xBA74; &#xC720;&#xC6A9;&#xD55C; &#xB2E4;&#xC591;&#xD55C; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xBB38;&#xBC95;&#xC744; &#xC54C;&#xC544;&#xBCF4;&#xAC8C;&#xB429;&#xB2C8;&#xB2E4;!
+&#xC774;&#xBC88;&#xC5D0; &#xC18C;&#xAC1C; &#xD560; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xBB38;&#xBC95;&#xC740; ES6 &#xC774;&#xC0C1; &#xBC84;&#xC804;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9; &#xD560; &#xC218; &#xC788;&#xB294; &#xBB38;&#xBC95;&#xB4E4;&#xC785;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB9AC;&#xACE0;, ES6 &#xAC00; &#xC544;&#xB2CC; &#xBB38;&#xBC95;&#xB4E4;&#xB3C4; &#xC740;&#xADFC;&#xD788; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC2DC;&#xC791;&#xD574;&#xBCFC;&#xAE4C;&#xC694;?</p>
+<script>
+      function attachComments() {
+        const el = document.querySelector('.markdown-section');
+        if (!el) return;
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'velopert/learnjs');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('label', 'comments');
+        el.appendChild(script);
+      }
+      setTimeout(attachComments, 100);
+    </script>
+</section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="../basics/10-prototype-class.html" class="navigation navigation-prev " aria-label="Previous page: 10. 프로토타입과 클래스">
+<i class="fa fa-angle-left"></i>
+</a>
+<a href="01-ternary.html" class="navigation navigation-next " aria-label="Next page: 01. 삼항 연산자">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2장. 알고있으면 유용한 자바스크립트 문법","level":"1.3","depth":1,"next":{"title":"01. 삼항 연산자","level":"1.3.1","depth":2,"path":"useful/01-ternary.md","ref":"./useful/01-ternary.md","articles":[]},"previous":{"title":"10. 프로토타입과 클래스","level":"1.2.10","depth":2,"path":"basics/10-prototype-class.md","ref":"./basics/10-prototype-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","comment","hide-published-with","github","edit-link"],"pluginsConfig":{"github":{"url":"https://github.com/velopert/learnjs"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"수정 요청하기","base":"https://github.com/velopert/learnjs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"comment":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"useful/README.md","mtime":"2019-05-13T13:25:38.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T12:51:25.214Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+<script src="../gitbook/gitbook.js"></script>
+<script src="../gitbook/theme.js"></script>
+<script src="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+<script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+</body>
+</html>

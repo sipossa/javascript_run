@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://learnjs.vlpt.us/useful/08-scope.html -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+
+<title>08. scope 의 이해 · GitBook</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="generator" content="GitBook 3.2.3">
+<link rel="stylesheet" href="./08. scope 의 이해 · GitBook_files/style.css">
+<link rel="stylesheet" href="./08. scope 의 이해 · GitBook_files/collapsible-chapters.css">
+<link rel="stylesheet" href="./08. scope 의 이해 · GitBook_files/website.css">
+<link rel="stylesheet" href="./08. scope 의 이해 · GitBook_files/search.css">
+<link rel="stylesheet" href="./08. scope 의 이해 · GitBook_files/website(1).css">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://learnjs.vlpt.us/useful/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="https://learnjs.vlpt.us/useful/gitbook/images/favicon.ico" type="image/x-icon">
+
+<style data-emotion="css" data-s=""></style><link rel="prev" href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html"><link rel="next" href="https://learnjs.vlpt.us/async/"></head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search">
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li class="chapter expanded" data-level="1.1" data-path="../">
+<a href="https://learnjs.vlpt.us/">
+벨로퍼트와 함께하는 모던 자바스크립트
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2" data-path="../basics/">
+<a href="https://learnjs.vlpt.us/basics/">
+1장. 자바스크립트 입문
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.2.1" data-path="../basics/01-hello-javascript.html">
+<a href="https://learnjs.vlpt.us/basics/01-hello-javascript.html">
+01. Hello JavaScript
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.2" data-path="../basics/02-variables.html">
+<a href="https://learnjs.vlpt.us/basics/02-variables.html">
+02. 변수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.3" data-path="../basics/03-operator.html">
+<a href="https://learnjs.vlpt.us/basics/03-operator.html">
+03. 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.4" data-path="../basics/04-conditions.html">
+<a href="https://learnjs.vlpt.us/basics/04-conditions.html">
+04. 조건문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.5" data-path="../basics/05-function.html">
+
+<a href="https://learnjs.vlpt.us/basics/05-function.html">
+05. 함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.6" data-path="../basics/06-object.html">
+<a href="https://learnjs.vlpt.us/basics/06-object.html">
+06. 객체
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.7" data-path="../basics/07-array.html">
+<a href="https://learnjs.vlpt.us/basics/07-array.html">
+07. 배열
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.8" data-path="../basics/08-loop.html">
+<a href="https://learnjs.vlpt.us/basics/08-loop.html">
+08. 반복문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.9" data-path="../basics/09-array-functions.html">
+<a href="https://learnjs.vlpt.us/basics/09-array-functions.html">
+09. 배열 내장함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.10" data-path="../basics/10-prototype-class.html">
+<a href="https://learnjs.vlpt.us/basics/10-prototype-class.html">
+10. 프로토타입과 클래스
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.3" data-path="./">
+<a href="https://learnjs.vlpt.us/useful/">
+2장. 알고있으면 유용한 자바스크립트 문법
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.3.1" data-path="01-ternary.html">
+<a href="https://learnjs.vlpt.us/useful/01-ternary.html">
+01. 삼항 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.2" data-path="02-truthy-and-falsy.html">
+<a href="https://learnjs.vlpt.us/useful/02-truthy-and-falsy.html">
+02. Truthy and Falsy
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.3" data-path="03-short-circuiting.html">
+<a href="https://learnjs.vlpt.us/useful/03-short-circuiting.html">
+03. 단축 평가 논리 계산법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.4" data-path="04-default-function-params.html">
+<a href="https://learnjs.vlpt.us/useful/04-default-function-params.html">
+04. 함수의 기본 파라미터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.5" data-path="05-smarter-conditions.html">
+<a href="https://learnjs.vlpt.us/useful/05-smarter-conditions.html">
+05. 조건문 더 스마트하게 쓰기
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.6" data-path="06-destructuring.html">
+<a href="https://learnjs.vlpt.us/useful/06-destructuring.html">
+06. 비구조화 할당 (구조 분해) 문법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.7" data-path="07-spread-and-rest.html">
+<a href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html">
+07. spread 와 rest 문법
+</a>
+</li>
+<li class="chapter active expanded" data-level="1.3.8" data-path="08-scope.html">
+<a href="https://learnjs.vlpt.us/useful/08-scope.html">
+08. scope 의 이해
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.4" data-path="../async/">
+<a href="https://learnjs.vlpt.us/async/">
+3장. 자바스크립트에서 비동기 처리 다루기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.4.1" data-path="../async/01-promise.html">
+<a href="https://learnjs.vlpt.us/async/01-promise.html">
+01. Promise
+</a>
+</li>
+<li class="chapter expanded" data-level="1.4.2" data-path="../async/02-async-await.html">
+<a href="https://learnjs.vlpt.us/async/02-async-await.html">
+02. async/await
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.5" data-path="../html/">
+<a href="https://learnjs.vlpt.us/html/">
+4장. HTML 과 JavaScript 연동하기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.5.1" data-path="../html/01-counter.html">
+<a href="https://learnjs.vlpt.us/html/01-counter.html">
+01. 카운터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.5.2" data-path="../html/02-modal.html">
+<a href="https://learnjs.vlpt.us/html/02-modal.html">
+02. 모달
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.6" data-path="../CONCLUSION.html">
+<a href="https://learnjs.vlpt.us/CONCLUSION.html">
+마무리
+</a>
+</li>
+<li class="chapter expanded" data-level="1.7" data-path="../reference.html">
+<a href="https://learnjs.vlpt.us/reference.html">
+참고 문헌
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="https://www.gitbook.com/" target="blank" class="gitbook-link" style="display: none;">
+Published with GitBook
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-github"></i></a><a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-edit"></i> 수정 요청하기</a><div class="dropdown pull-right js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Share" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-5 ">Facebook</button><button class="button size-5 ">Google+</button><button class="button size-5 ">Twitter</button><button class="button size-5 ">Weibo</button><button class="button size-5 ">Instapaper</button></div></div></div><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-facebook"></i></a><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-twitter"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" href="https://learnjs.vlpt.us/useful/08-scope.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="https://learnjs.vlpt.us/">08. scope 의 이해</a>
+</h1>
+</div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<h2 id="08-자바스크립트의-scope-에-대한-이해">08. 자바스크립트의 Scope 에 대한 이해</h2>
+<p>이번에는 자바스크립트의 Scope 에 대해서 알아봅시다. Scope 란, 우리가 변수 혹은 함수를 선언하게 될 때 해당 변수 또는 함수가 유효한 범위를 의미합니다. Scope 는 총 3가지 종류가있습니다.</p>
+<ol>
+<li><strong>Global (전역) Scope</strong>: 코드의 모든 범위에서 사용이 가능합니다.</li>
+<li><strong>Function (함수) Scope</strong>: 함수 안에서만 사용이 가능합니다.</li>
+<li><strong>Block (블록) Scope</strong>: if, for, switch 등 특정 블록 내부에서만 사용이 가능합니다.</li>
+</ol>
+<h3 id="예시를-통한-scope-이해">예시를 통한 Scope 이해</h3>
+<p>한번, 예시 코드를 보고 Scope 를 이해해봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> value = <span class="hljs-string">'hello!'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'myFunction: '</span>);
+  <span class="hljs-built_in">console</span>.log(value);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">otherFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'otherFunction: '</span>);
+  <span class="hljs-keyword">const</span> value = <span class="hljs-string">'bye!'</span>;
+  <span class="hljs-built_in">console</span>.log(value);
+}
+
+myFunction();
+otherFunction();
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'global scope: '</span>);
+<span class="hljs-built_in">console</span>.log(value);
+</code></pre>
+<p>위 코드의 결과는 다음과 같습니다.</p>
+<p><img src="./08. scope 의 이해 · GitBook_files/8pSTR1B.png" alt=""></p>
+<p>코드의 맨 윗줄에서 선언된 <code>value</code> 값은 Global Scope 로 선언된 값입니다. Global Scope 로 선언된 값은 어디서든지 사용이 가능합니다. <code>myFunction</code> 에서 바로 사용을 할 수 있었지요?</p>
+<p><code>otherFunction</code> 에서는 함수 내부에서 <code>value</code> 값을 <code>'bye!'</code> 로 새로 선언을 해주었습니다. 이렇게 되면, value 라는 값은 Function Scope 로 지정이 되서 해당 값은 <code>otherFunction</code> 내부에서만 유효한 값이 됩니다. 이렇게 값을 설정한다고 해서 기존에 Global Scope 로 선언된 <code>value</code> 값이 바뀌지 않습니다.</p>
+<p>또 다른 예시를 확인해봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> value = <span class="hljs-string">'hello!'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> value = <span class="hljs-string">'bye!'</span>;
+  <span class="hljs-keyword">const</span> anotherValue = <span class="hljs-string">'world'</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">functionInside</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'functionInside: '</span>);
+    <span class="hljs-built_in">console</span>.log(value);
+    <span class="hljs-built_in">console</span>.log(anotherValue);
+  }
+  functionInside();
+}
+
+
+myFunction()
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'global scope: '</span>);
+<span class="hljs-built_in">console</span>.log(value);
+<span class="hljs-built_in">console</span>.log(anotherValue);
+</code></pre>
+<p><img src="./08. scope 의 이해 · GitBook_files/LWAlKxY.png" alt=""></p>
+<p><code>myFunction</code> 내부에 <code>anotherValue</code> 라는 새로운 값을 선언했고, <code>functionInside</code> 라는 함수도 선언을 했습니다. <code>functionInside</code> 함수에서는 <code>myFunction</code> 에서 선언한 <code>value</code> 값과 <code>anotherValue</code> 값을 조회 할 수 있습니다.</p>
+<p>반면, <code>myFunction</code> 밖에서는 <code>anotherValue</code> 를 조회 할 수 없습니다.</p>
+<p>이제, 또 다른 예시를 알아봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> value = <span class="hljs-string">'hello!'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> value = <span class="hljs-string">'bye!'</span>;
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">const</span> value = <span class="hljs-string">'world'</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'block scope: '</span>);
+    <span class="hljs-built_in">console</span>.log(value);
+  }
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'function scope: '</span>);
+  <span class="hljs-built_in">console</span>.log(value);
+}
+
+myFunction();
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'global scope: '</span>);
+<span class="hljs-built_in">console</span>.log(value);
+</code></pre>
+<p><img src="./08. scope 의 이해 · GitBook_files/wz0uA9I.png" alt=""></p>
+<p><code>const</code> 로 선언한 값은 Block Scope 로 선언이 됩니다. 따라서, if 문 같은 블록 내에서 새로운 변수/상수를 선언하게 된다면, 해당 블록 내부에서만 사용이 가능하며, 블록 밖의 범위에서 똑같은 이름을 가진 값이 있다고 해도 영향을 주지 않습니다.</p>
+<p><code>let</code> 또한 마찬가지 입니다.</p>
+<p>하지만 <code>var</code> 는 어떨까요?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> value = <span class="hljs-string">'hello!'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> value = <span class="hljs-string">'bye!'</span>;
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">var</span> value = <span class="hljs-string">'world'</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'block scope: '</span>);
+    <span class="hljs-built_in">console</span>.log(value);
+  }
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'function scope: '</span>);
+  <span class="hljs-built_in">console</span>.log(value);
+}
+
+myFunction();
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'global scope: '</span>);
+<span class="hljs-built_in">console</span>.log(value);
+</code></pre>
+<p><code>var</code> 는 Function Scope 로 선언이 되므로, if 문 블록 내부에서 선언한 value 값이 블록 밖의 value 에도 영향을 미치게 됩니다.</p>
+<p><img src="./08. scope 의 이해 · GitBook_files/uHKGfKO.png" alt=""></p>
+<h3 id="hoisting-이해하기">Hoisting 이해하기</h3>
+<p>Hoisting 이란, 자바스크립트에서 아직 선언되지 않은 함수/변수를 "끌어올려서" 사용 할 수 있는 자바스크립트의 작동 방식을 의미합니다.</p>
+<p>다음 코드를 확인해보세요.</p>
+<pre><code class="lang-javascript">myFunction();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello world!'</span>);
+}
+</code></pre>
+<p>위 코드에서는 <code>myFunction</code> 함수를 선언하기 전에, <code>myFunction()</code> 을 호출해주었습니다. 함수가 아직 선언되지 않았음에도 불구하고 코드는 정상적으로 작동하게 됩니다.</p>
+<p>이게 잘 작동하는 이유는, 자바스크립트 엔진이 위 코드를 해석하는 과정에서, 다음과 같이 받아들이게 되기 때문입니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello world!'</span>);
+}
+
+myFunction();
+</code></pre>
+<p>이러한 현상을, Hoisting 이라고 부릅니다.</p>
+<p>변수 또한 Hoisting 됩니다.</p>
+<p>예를 들어서, 다음과 같은 코드를 실행한다면,</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(number);
+</code></pre>
+<p><img src="./08. scope 의 이해 · GitBook_files/SQjmfQR.png" alt=""></p>
+<p>이런 오류가 발생합니다.</p>
+<p>그렇지만, 다음과 같은 코드는</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(number);
+<span class="hljs-keyword">var</span> number = <span class="hljs-number">2</span>;
+</code></pre>
+<p><img src="./08. scope 의 이해 · GitBook_files/TIwGkJL.png" alt=""></p>
+<p><code>undefined</code> 가 출력됩니다.</p>
+<p>자바스크립트 엔진이 위 코드를 해석 할 때는 다음과 같이 받아들이게 됩니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> number;
+<span class="hljs-built_in">console</span>.log(number);
+number = <span class="hljs-number">2</span>;
+</code></pre>
+<p>반면, <code>const</code> 와 <code>let</code> 은 hoisting 이 발생하지 않고, 에러가 발생하게 됩니다. Codesandbox 에서는 자바스크립트가 Babel 이라는 도구에 의하여 <code>const</code> 와 <code>let</code> 이 <code>var</code> 로 변환되기 때문에 오류가 발생하지 않습니다. Chrome 개발자 도구의 콘솔에서 다음 코드를 실행해보세요. (혹은 Codesandbox 의 설정에서 .babelrc 를 비워도 됩니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(a);
+    <span class="hljs-keyword">let</span> a = <span class="hljs-number">2</span>;
+}
+fn();
+</code></pre>
+<p><img src="./08. scope 의 이해 · GitBook_files/sHIevmg.png" alt=""></p>
+<p>Hoisting 은 자바스크립트 엔진이 갖고 있는 성질이며, Hoisting 을 일부러 할 필요는 없지만, 방지하는 것이 좋습니다. 왜냐하면 Hoisting 이 발생하는 코드는 이해하기 어렵기 때문에 유지보수도 힘들어지고 의도치 않는 결과물이 나타나기 쉽기 때문입니다.</p>
+<p>Hoisting 을 방지하기 위해서, 함수의 경우 꼭 선언 후에 호출을 하도록 주의를 하시고, <code>var</code> 대신 <code>const</code>, <code>let</code> 을 위주로 사용하세요. 추가적으로, 나중에 자바스크립트 개발을 본격적으로 하게 될 때에는 ESLint 라는것을 사용하여 Hoisting 이 발생하는 코드는 에디터상에서 쉽게 발견해낼 수 있습니다.<script>
+      function attachComments() {
+        const el = document.querySelector('.markdown-section');
+        if (!el) return;
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'velopert/learnjs');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('label', 'comments');
+        el.appendChild(script);
+      }
+      setTimeout(attachComments, 100);
+    </script></p>
+<div class="utterances">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./08. scope 의 이해 · GitBook_files/utterances.html" loading="lazy"></iframe>
+  </div></section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html" class="navigation navigation-prev " aria-label="Previous page: 07. spread 와 rest 문법">
+<i class="fa fa-angle-left"></i>
+</a>
+<a href="https://learnjs.vlpt.us/async/" class="navigation navigation-next " aria-label="Next page: 3장. 자바스크립트에서 비동기 처리 다루기" style="margin-right: 17px;">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08. scope 의 이해","level":"1.3.8","depth":2,"next":{"title":"3장. 자바스크립트에서 비동기 처리 다루기","level":"1.4","depth":1,"path":"async/README.md","ref":"./async/README.md","articles":[{"title":"01. Promise","level":"1.4.1","depth":2,"path":"async/01-promise.md","ref":"./async/01-promise.md","articles":[]},{"title":"02. async/await","level":"1.4.2","depth":2,"path":"async/02-async-await.md","ref":"./async/02-async-await.md","articles":[]}]},"previous":{"title":"07. spread 와 rest 문법","level":"1.3.7","depth":2,"path":"useful/07-spread-and-rest.md","ref":"./useful/07-spread-and-rest.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","comment","hide-published-with","github","edit-link"],"pluginsConfig":{"github":{"url":"https://github.com/velopert/learnjs"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"수정 요청하기","base":"https://github.com/velopert/learnjs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"comment":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"useful/08-scope.md","mtime":"2019-06-08T12:30:45.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T12:51:25.214Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+<script src="./08. scope 의 이해 · GitBook_files/gitbook.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/theme.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/collapsible-chapters.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/plugin.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/plugin.js(1).다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/plugin.js(2).다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/search-engine.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/search.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/lunr.min.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/search-lunr.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/buttons.js.다운로드"></script>
+<script src="./08. scope 의 이해 · GitBook_files/fontsettings.js.다운로드"></script>
+
+
+<div id="__endic_crx__"><div class="css-1abc5oq"></div></div></body></html>

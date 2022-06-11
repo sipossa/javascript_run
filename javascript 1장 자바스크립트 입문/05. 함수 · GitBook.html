@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://learnjs.vlpt.us/basics/05-function.html -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+
+<title>05. 함수 · GitBook</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="generator" content="GitBook 3.2.3">
+<link rel="stylesheet" href="./05. 함수 · GitBook_files/style.css">
+<link rel="stylesheet" href="./05. 함수 · GitBook_files/collapsible-chapters.css">
+<link rel="stylesheet" href="./05. 함수 · GitBook_files/website.css">
+<link rel="stylesheet" href="./05. 함수 · GitBook_files/search.css">
+<link rel="stylesheet" href="./05. 함수 · GitBook_files/website(1).css">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://learnjs.vlpt.us/basics/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="https://learnjs.vlpt.us/basics/gitbook/images/favicon.ico" type="image/x-icon">
+
+<style data-emotion="css" data-s=""></style><link rel="prev" href="https://learnjs.vlpt.us/basics/04-conditions.html"><link rel="next" href="https://learnjs.vlpt.us/basics/06-object.html"></head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search">
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li class="chapter expanded" data-level="1.1" data-path="../">
+<a href="https://learnjs.vlpt.us/">
+벨로퍼트와 함께하는 모던 자바스크립트
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2" data-path="./">
+<a href="https://learnjs.vlpt.us/basics/">
+1장. 자바스크립트 입문
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.2.1" data-path="01-hello-javascript.html">
+<a href="https://learnjs.vlpt.us/basics/01-hello-javascript.html">
+01. Hello JavaScript
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.2" data-path="02-variables.html">
+<a href="https://learnjs.vlpt.us/basics/02-variables.html">
+02. 변수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.3" data-path="03-operator.html">
+<a href="https://learnjs.vlpt.us/basics/03-operator.html">
+03. 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.4" data-path="04-conditions.html">
+<a href="https://learnjs.vlpt.us/basics/04-conditions.html">
+04. 조건문
+</a>
+</li>
+<li class="chapter active expanded" data-level="1.2.5" data-path="05-function.html">
+<a href="https://learnjs.vlpt.us/basics/05-function.html">
+05. 함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.6" data-path="06-object.html">
+<a href="https://learnjs.vlpt.us/basics/06-object.html">
+06. 객체
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.7" data-path="07-array.html">
+<a href="https://learnjs.vlpt.us/basics/07-array.html">
+07. 배열
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.8" data-path="08-loop.html">
+<a href="https://learnjs.vlpt.us/basics/08-loop.html">
+08. 반복문
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.9" data-path="09-array-functions.html">
+<a href="https://learnjs.vlpt.us/basics/09-array-functions.html">
+09. 배열 내장함수
+</a>
+</li>
+<li class="chapter expanded" data-level="1.2.10" data-path="10-prototype-class.html">
+<a href="https://learnjs.vlpt.us/basics/10-prototype-class.html">
+10. 프로토타입과 클래스
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.3" data-path="../useful/">
+<a href="https://learnjs.vlpt.us/useful/">
+2장. 알고있으면 유용한 자바스크립트 문법
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.3.1" data-path="../useful/01-ternary.html">
+<a href="https://learnjs.vlpt.us/useful/01-ternary.html">
+01. 삼항 연산자
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.2" data-path="../useful/02-truthy-and-falsy.html">
+<a href="https://learnjs.vlpt.us/useful/02-truthy-and-falsy.html">
+02. Truthy and Falsy
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.3" data-path="../useful/03-short-circuiting.html">
+<a href="https://learnjs.vlpt.us/useful/03-short-circuiting.html">
+03. 단축 평가 논리 계산법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.4" data-path="../useful/04-default-function-params.html">
+<a href="https://learnjs.vlpt.us/useful/04-default-function-params.html">
+04. 함수의 기본 파라미터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.5" data-path="../useful/05-smarter-conditions.html">
+<a href="https://learnjs.vlpt.us/useful/05-smarter-conditions.html">
+05. 조건문 더 스마트하게 쓰기
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.6" data-path="../useful/06-destructuring.html">
+<a href="https://learnjs.vlpt.us/useful/06-destructuring.html">
+06. 비구조화 할당 (구조 분해) 문법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.7" data-path="../useful/07-spread-and-rest.html">
+<a href="https://learnjs.vlpt.us/useful/07-spread-and-rest.html">
+07. spread 와 rest 문법
+</a>
+</li>
+<li class="chapter expanded" data-level="1.3.8" data-path="../useful/08-scope.html">
+<a href="https://learnjs.vlpt.us/useful/08-scope.html">
+08. scope 의 이해
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.4" data-path="../async/">
+<a href="https://learnjs.vlpt.us/async/">
+3장. 자바스크립트에서 비동기 처리 다루기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.4.1" data-path="../async/01-promise.html">
+<a href="https://learnjs.vlpt.us/async/01-promise.html">
+01. Promise
+</a>
+</li>
+<li class="chapter expanded" data-level="1.4.2" data-path="../async/02-async-await.html">
+<a href="https://learnjs.vlpt.us/async/02-async-await.html">
+02. async/await
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.5" data-path="../html/">
+<a href="https://learnjs.vlpt.us/html/">
+4장. HTML 과 JavaScript 연동하기
+<i class="exc-trigger fa"></i></a>
+<ul class="articles">
+<li class="chapter expanded" data-level="1.5.1" data-path="../html/01-counter.html">
+<a href="https://learnjs.vlpt.us/html/01-counter.html">
+01. 카운터
+</a>
+</li>
+<li class="chapter expanded" data-level="1.5.2" data-path="../html/02-modal.html">
+<a href="https://learnjs.vlpt.us/html/02-modal.html">
+02. 모달
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter expanded" data-level="1.6" data-path="../CONCLUSION.html">
+<a href="https://learnjs.vlpt.us/CONCLUSION.html">
+마무리
+</a>
+</li>
+<li class="chapter expanded" data-level="1.7" data-path="../reference.html">
+<a href="https://learnjs.vlpt.us/reference.html">
+참고 문헌
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="https://www.gitbook.com/" target="blank" class="gitbook-link" style="display: none;">
+Published with GitBook
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-github"></i></a><a class="btn pull-left js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-edit"></i> 수정 요청하기</a><div class="dropdown pull-right js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Share" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-5 ">Facebook</button><button class="button size-5 ">Google+</button><button class="button size-5 ">Twitter</button><button class="button size-5 ">Weibo</button><button class="button size-5 ">Instapaper</button></div></div></div><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-facebook"></i></a><a class="btn pull-right js-toolbar-action" aria-label="" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-twitter"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" href="https://learnjs.vlpt.us/basics/05-function.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="https://learnjs.vlpt.us/">05. 함수</a>
+</h1>
+</div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<h2 id="05-함수">05. 함수</h2>
+<p>함수는, 특정 코드를 하나의 명령으로 실행 할 수 있게 해주는 기능입니다.</p>
+<p>예를 들어서, 우리가 특정 값들의 합을 구하고 싶을 때는 다음과 같이 코드를 작성합니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">const</span> b = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">const</span> sum = a + b;
+</code></pre>
+<p>한번, 이 작업을 함수로 만들어보겠습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">const</span> sum = add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(sum);
+</code></pre>
+<p>결과는 3이 됩니다.</p>
+<p>함수를 만들 때는 <code>function</code> 키워드를 사용하며, 함수에서 어떤 값을 받아올지 정해주는데 이를 파라미터(매개변수)라고 부릅니다.</p>
+<p>함수 내부에서 <code>return</code> 키워드를 사용하여 함수의 결과물을 지정 할 수 있습니다.</p>
+<p>추가적으로, <code>return</code> 을 하게 되면 함수가 끝납니다. 만약 다음과 같이 코드가 작성된다면, return 아래의 코드는 호출이 안됩니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'호출이 되지 않는 코드!'</span>);
+}
+
+<span class="hljs-keyword">const</span> sum = add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(sum);
+</code></pre>
+<h3 id="연습">연습</h3>
+<p>함수 사용을 연습해봅시다.</p>
+<h4 id="hello-name">Hello, name!</h4>
+<p>name 이라는 파라미터를 넣으면 콘솔에 'Hello name!' 이라는 결과를 출력하는 코드를 작성해봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello, '</span> + name + <span class="hljs-string">'!'</span>);
+}
+hello(<span class="hljs-string">'velopert'</span>);
+</code></pre>
+<p>결과물은 다음과 같습니다.</p>
+<pre><code>"Hello, velopert!"
+</code></pre><p>console.log 를 하게 될 때 우리는 문자열을 조합하기 위해서 <code>+</code> 연산자를 사용했습니다. 이렇게 문자열을 조합 할 때 <code>+</code> 를 사용해도 큰 문제는 없지만, 더욱 편하게 조합을 하는 방법이 있습니다. 바로, ES6 의 템플릿 리터럴 (Template Literal)이라는 문법을 사용하는 것 입니다.</p>
+<blockquote>
+<p><strong>ES6 가 뭔가요?</strong></p>
+<p>ES6 는 ECMAScript6 를 의미하며, 자바스크립트의 버전을 가르킵니다. ES6는 2015년에 도입이 되었습니다. ES6 는 ES2015 라고 불리기도 합니다. 그리고 2015년 이후에 계속해서 새로운 자바스크립트 버전이 나오고 있습니다. ES7(ES2016) ES8(ES2017) ES9(ES2018) ES10(ES2019).. 새로운 자바스크립트 버전이 나올때마다 새로운 문법이 소개됩니다.</p>
+<p>브라우저 버전에 따라 지원되는 자바스크립트 버전이 다릅니다. 하지만, 보통 웹 개발을 할 때에는 Babel 이라는 도구를 사용하여 최신 버전의 자바스크립트가 구버전의 브라우저에서도 실행되도록 할 수 있습니다. (정확히는, 최신버전 자바스크립트를 구버전 형태로 변환하는 작업을 거칩니다.)</p>
+</blockquote>
+<p>템플릿 리터럴을 사용하여 구현을 해봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hello, <span class="hljs-subst">${name}</span>!`</span>);
+}
+hello(<span class="hljs-string">'velopert'</span>);
+</code></pre>
+<h4 id="점수를-성적등급으로-변환하기">점수를 성적등급으로 변환하기</h4>
+<p>이번에는 점수가 주어졌을 때 A, B, C, D, F 등급을 반환하는 함수를 만들어봅시다.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getGrade</span>(<span class="hljs-params">score</span>) </span>{
+  <span class="hljs-keyword">if</span> (score === <span class="hljs-number">100</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'A+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">90</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'A'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score === <span class="hljs-number">89</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'B+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">80</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'B'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score === <span class="hljs-number">79</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'C+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">70</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'C'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score === <span class="hljs-number">69</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'D+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">60</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'D'</span>;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'F'</span>;
+  }
+}
+
+<span class="hljs-keyword">const</span> grade = getGrade(<span class="hljs-number">90</span>);
+<span class="hljs-built_in">console</span>.log(grade);
+</code></pre>
+<p>grade 가 90 일 때에는 결과가 A 가 됩니다.</p>
+<h3 id="화살표-함수">화살표 함수</h3>
+<p>함수를 선언하는 방식 중 또 다른 방법은 화살표 함수 문법을 사용 하는 것 입니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> add = (a, b) =&gt; {
+  <span class="hljs-keyword">return</span> a + b;
+};
+
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>));
+</code></pre>
+<p><code>function</code> 키워드 대신에 <code>=&gt;</code> 문자를 사용해서 함수를 구현했는데요, 화살표의 좌측에는 함수의 파라미터, 화살표의 우측에는 코드 블록이 들어옵니다.</p>
+<p>그런데, 만약에 위와 같이 코드 블록 내부에서 바로 return 을 하는 경우는 다음과 같이 줄여서 쓸 수도 있습니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> add = (a, b) =&gt; a + b;
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>));
+</code></pre>
+<p>아까 만들었던 getGrade 함수처럼 여러 줄로 구성되어있는 경우에는 코드 블록을 만들어야합니다.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> getGrade = score =&gt; {
+  <span class="hljs-keyword">if</span> (score === <span class="hljs-number">100</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'A+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">90</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'A'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score === <span class="hljs-number">89</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'B+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">80</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'B'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score === <span class="hljs-number">79</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'C+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">70</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'C'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score === <span class="hljs-number">69</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'D+'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">60</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'D'</span>;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'F'</span>;
+  }
+};
+<span class="hljs-keyword">const</span> grade = getGrade(<span class="hljs-number">90</span>);
+<span class="hljs-built_in">console</span>.log(grade);
+</code></pre>
+<p>화살표 함수와 일반 function 으로 만든 함수와의 주요 차이점은 화살표 함수에서 가르키는 this 와 function 에서 가르키는 this 가 서로 다르다는 건데요, 이에 대한 자세한 내용은 나중에 알아보도록 하겠습니다.</p>
+<script>
+      function attachComments() {
+        const el = document.querySelector('.markdown-section');
+        if (!el) return;
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'velopert/learnjs');
+        script.setAttribute('issue-term', 'title');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('label', 'comments');
+        el.appendChild(script);
+      }
+      setTimeout(attachComments, 100);
+    </script>
+<div class="utterances">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./05. 함수 · GitBook_files/utterances.html" loading="lazy"></iframe>
+  </div></section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="https://learnjs.vlpt.us/basics/04-conditions.html" class="navigation navigation-prev " aria-label="Previous page: 04. 조건문">
+<i class="fa fa-angle-left"></i>
+</a>
+<a href="https://learnjs.vlpt.us/basics/06-object.html" class="navigation navigation-next " aria-label="Next page: 06. 객체" style="margin-right: 17px;">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05. 함수","level":"1.2.5","depth":2,"next":{"title":"06. 객체","level":"1.2.6","depth":2,"path":"basics/06-object.md","ref":"./basics/06-object.md","articles":[]},"previous":{"title":"04. 조건문","level":"1.2.4","depth":2,"path":"basics/04-conditions.md","ref":"./basics/04-conditions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","comment","hide-published-with","github","edit-link"],"pluginsConfig":{"github":{"url":"https://github.com/velopert/learnjs"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"수정 요청하기","base":"https://github.com/velopert/learnjs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"comment":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/05-function.md","mtime":"2019-05-18T02:42:54.599Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T12:51:25.214Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+<script src="./05. 함수 · GitBook_files/gitbook.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/theme.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/collapsible-chapters.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/plugin.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/plugin.js(1).다운로드"></script>
+<script src="./05. 함수 · GitBook_files/plugin.js(2).다운로드"></script>
+<script src="./05. 함수 · GitBook_files/search-engine.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/search.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/lunr.min.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/search-lunr.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/buttons.js.다운로드"></script>
+<script src="./05. 함수 · GitBook_files/fontsettings.js.다운로드"></script>
+
+
+<div id="__endic_crx__"><div class="css-1abc5oq"></div></div></body></html>
