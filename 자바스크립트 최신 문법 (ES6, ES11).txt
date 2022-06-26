@@ -1,0 +1,87 @@
+1. Shorthand property names
+obj의 key와 value가 동일하면 하나로 쓸 수 있다.
+
+bad
+const name = 'daisy';
+const age = '20';
+
+const daisy1 = {
+  name: name
+  age:name
+};
+good
+const daisy2 = {
+  name,
+  age,
+}
+Shorthand property names
+
+
+2. Destructuring Assignment
+배열, 객체 모두 사용 가능
+bad
+//array
+const first = animals[0];
+const second = animals[1];
+//object
+const name = student.name;
+const level = student.level;
+good
+//array
+const[first, second] = animals;
+
+//object
+const {name, level} = student;
+//변수명을 key와 다르게 하고 싶은 경우
+const {name: studentName, level: studentLevel} = student;
+Destructuring Assignment
+
+
+3. Spread Syntax
+배열/객체에 있는 item들을 하나 하나 복사해올 수 있음
+obj가 가리키고 있는 주소의 참고값만 복사해오기 때문에 spread operator로 복사해온다 해도 원래의 obj를 변경하게 되면 복사해온 것들도 다 바뀜
+const obj1 = { key: 'key1' };
+const obj2 = { key: 'key2'};
+
+const array = [obj1, obje2];
+const arrayCopy = [...array];
+//array와 arrayCopy 동일하게 출력됨
+배열을 복사해오면서 새로운 아이템을 추가하고 싶다면? spread뒤에 콤마찍고 추가하고 싶은 아이템 넣으면 됨
+병합하기
+const fruits = [...fruits1, ...fruits2];
+Spread Syntax
+
+
+4. Default parameters
+함수에 인자에 전달된 값이 없거나 undefined가 전달될 경우 않는다면 default값을 사용함
+function printMessage(message = `default message'){
+console.log(message)};
+Default parameters
+
+
+
+5. Optional Chaining
+const pserson1 = {
+  name: 'Ellie',
+  job: {
+    title: `SW Engineer',
+    manager: {
+      name: 'Bob',
+   },
+  },
+};
+function printManager(person){
+  console.log(persion.job?.manager?.name);
+}
+Optional chaining
+
+
+6. Nullish coalescing operator
+왼쪽 피연산자가 null 또는 undefined일 때 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽 피연산자를 반환함
+const name = '';
+const username = name ?? 'Guest';
+console.log(userName)
+
+const num = 0;
+const message = num ?? 'undefined";
+console.log(message);

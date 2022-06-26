@@ -1,0 +1,75 @@
+Javascript
+
+[javascript] ?. 옵셔널 체이닝 연산자
+wizi 2021. 8. 27. 00:30
+자바스크립트에서의 물음표 점
+
+ 
+
+자바스크립트 코드를 보다가  ?.  혹은   ??    과 같은 문법을 본 적이 있나요?
+
+ES11에서 신규 도입된 연산자 입니다!
+
+ 
+
+?.    =>    옵셔널 체이닝 연산자
+
+ 
+
+개발하다가 object의 property값이 없어서 에러가 발생하는 경우가 많이 있습니다.
+
+var obj = undefined;
+console.log(obj.data);
+
+//error 발생!!
+undefined인 값의 property를 읽으려고 하면 node에서는 해당 값을 읽을 수 없다는 error message가 출력됩니다.
+
+ 
+
+개발을 진행할 때 object에서 property를 가져오는 경우가 많은데 해당값이 존재하는지 안하는지 확신이 안드는 경우가 존재합니다.
+
+이럴 경우 예외처리를 위해 for문을 사용하거나 논리연산자 &&를 사용했었습니다.
+
+//if문을 이용한 object 검증방법
+var obj = undefined;
+
+if(obj === undefined){
+    console.log(undefined);
+}
+
+// undefined
+//&& 연산자를 이용한 object 검증방법
+var obj = undefined;
+
+var result = obj && obj.data;
+
+console.log(result);
+
+// undefined
+ 
+
+기존 방법도 나름 괜찮아 보인다.
+
+하지만 더욱 단축된 표현인 옵셔널 체이닝 연산자를 이용해서 이를 똑같이 써보자
+
+// 옵셔널 체이닝 연산자를 이용한 object 검증방법
+var obj = undefined;
+
+console.log(obj?.data);
+
+// undefined
+오우오우... obj가 undefined이더라도 에러가 나지 않으면서 undefined를 반환해 준다!!
+
+ 
+
+ 
+
+만약 obj가 object라면 그대로 property 참조를 이어간다!!
+
+var obj = {
+    data : 'test',
+}
+
+console.log(obj?.data);
+
+// test

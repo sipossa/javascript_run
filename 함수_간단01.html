@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        const list = [1, 2, 3, 4, 5];
+        const listHandler = (e) => {
+            const dkist = [...list];
+            dkist.push(e)
+            console.log(list, dkist, list == dkist, list && true, false || list, null ?? list, this ?? list, e);
+            const dlist = [list, dkist, list == dkist, list && true, false || list, null ?? list, this ?? list, e]
+            document.getElementById('result').innerText = dlist;
+            document.getElementById('result').innerText = e;
+        }
+        listHandler(6);
+    </script>
+</body>
+
+</html>
