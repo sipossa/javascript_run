@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://gnujoow.github.io/dev/2016/10/14/Dev6-es6-array-helper/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="canonical" href="https://kimlog.me/">
+
+  <!-- naver ownership verification -->
+  <meta name="naver-site-verification" content="fdcfc6ffe6d16095fbd14078f1f8726df5afee5d">
+
+  <title>
+    
+      ES6 array helper method들을 알아보자 · 김로그
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./ES6 array helper method들을 알아보자 · 김로그_files/index.css">
+  <link rel="stylesheet" href="./ES6 array helper method들을 알아보자 · 김로그_files/poole.css">
+  <link rel="stylesheet" href="./ES6 array helper method들을 알아보자 · 김로그_files/syntax.css">
+  <link rel="stylesheet" href="./ES6 array helper method들을 알아보자 · 김로그_files/lanyon.css">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://gnujoow.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://gnujoow.github.io/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title=" · ATOM" href="https://gnujoow.github.io/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title=" · RSS" href="https://gnujoow.github.io/feed.xml">
+
+  <!-- script -->
+  <script src="./ES6 array helper method들을 알아보자 · 김로그_files/f.txt"></script><script src="./ES6 array helper method들을 알아보자 · 김로그_files/f(1).txt"></script><script src="./ES6 array helper method들을 알아보자 · 김로그_files/f(2).txt" id="google_shimpl"></script><script async="" src="./ES6 array helper method들을 알아보자 · 김로그_files/analytics.js.다운로드"></script><script src="./ES6 array helper method들을 알아보자 · 김로그_files/jquery-2.2.4.min.js.다운로드" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./ES6 array helper method들을 알아보자 · 김로그_files/MathJax.js.다운로드" type="text/javascript">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    })
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73286289-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ES6 array helper method들을 알아보자 | 김로그</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="ES6 array helper method들을 알아보자">
+<meta name="author" content="kimlog">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="알아두면 두고두고 편하게 쓸 수 있는 es6의 array helper method들의 사용법에 대해서 알아보자.">
+<meta property="og:description" content="알아두면 두고두고 편하게 쓸 수 있는 es6의 array helper method들의 사용법에 대해서 알아보자.">
+<link rel="canonical" href="http://gnujoow.github.io//dev/2016/10/14/Dev6-es6-array-helper/">
+<meta property="og:url" content="http://gnujoow.github.io//dev/2016/10/14/Dev6-es6-array-helper/">
+<meta property="og:site_name" content="김로그">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-10-14T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="ES6 array helper method들을 알아보자">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"kimlog","url":"http://github.com/gnujoow"},"dateModified":"2016-10-14T00:00:00+00:00","datePublished":"2016-10-14T00:00:00+00:00","description":"알아두면 두고두고 편하게 쓸 수 있는 es6의 array helper method들의 사용법에 대해서 알아보자.","headline":"ES6 array helper method들을 알아보자","mainEntityOfPage":{"@type":"WebPage","@id":"http://gnujoow.github.io//dev/2016/10/14/Dev6-es6-array-helper/"},"url":"http://gnujoow.github.io//dev/2016/10/14/Dev6-es6-array-helper/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="./ES6 array helper method들을 알아보자 · 김로그_files/embed.js.다운로드" data-timestamp="1655022299265"></script><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./ES6 array helper method들을 알아보자 · 김로그_files/f(3).txt" as="script"><script type="text/javascript" src="./ES6 array helper method들을 알아보자 · 김로그_files/f(3).txt"></script><link rel="preload" href="./ES6 array helper method들을 알아보자 · 김로그_files/f(4).txt" as="script"><script type="text/javascript" src="./ES6 array helper method들을 알아보자 · 김로그_files/f(4).txt"></script><style data-emotion="css" data-s=""></style><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.63860eb743c7d9d2adf0fa435788abe7.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.33bc87b2c4f9324203cc85b7dd1d0492.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.39ef974e33e97bdc315c595632f05d3c.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script async="" id="dsq_recs_scr" src="./ES6 array helper method들을 알아보자 · 김로그_files/recommendations.js.다운로드"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/recommendations/styles/recommendations.10022a97346f1c6e3798931bbd8e4bb5.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/recommendations/common.bundle.a59fbd11efae764ccd959d61e4925fee.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/recommendations/recommendations.bundle.926bc472e4859a48daa346b4ba2ab4f4.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script src="./ES6 array helper method들을 알아보자 · 김로그_files/alfie_v4.63f1ab6d6b9d5807dc0c94ef3fe0b851.js.다운로드" async="" charset="UTF-8"></script></head>
+
+  <body style="padding: 0px 0px 154px;">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>happy coding :)</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://gnujoow.github.io/">Home</a>
+    <a class="sidebar-nav-item" href="https://gnujoow.github.io/blog">Blog</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://gnujoow.github.io/category/">Category</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="https://gnujoow.github.io/tags/">Tags</a>
+        
+      
+    
+
+    <!--span class="sidebar-nav-item">Currently v</span-->
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      © 2022. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap" style="height: auto !important;">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://gnujoow.github.io/dev/2016/10/14/Dev6-es6-array-helper/" title="Home">김로그</a>
+            <small>개발 잘 하고 싶다</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content" style="height: auto !important;">
+        <div class="post" style="height: auto !important;">
+  <h1 class="post-title">ES6 array helper method들을 알아보자</h1>
+  <span class="post-date">14 Oct 2016</span>
+  <script async="" src="./ES6 array helper method들을 알아보자 · 김로그_files/f(5).txt"></script>
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1377383149600056" data-ad-slot="6480625722" data-ad-format="auto" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:720px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="720" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads.html" data-google-container-id="a!1" data-google-query-id="CO6UscK-p_gCFYPQTAIdPMQHwg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <br>
+  알아두면 두고두고 편하게 쓸 수 있는 es6의 array helper method들의 사용법에 대해서 알아보자.
+  <script async="" src="./ES6 array helper method들을 알아보자 · 김로그_files/f(5).txt"></script>
+<!-- blog-text -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1377383149600056" data-ad-slot="2696620496" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_1_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:720px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="720" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads(1).html" data-google-container-id="a!2" data-google-query-id="CO6gssK-p_gCFRDBTAId71IH0A" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <hr>
+  <p>이 글은 ES6를 막 공부하기 시작한 사람이 공부한 내용을 정리하고 작성한 글입니다. 따라서 내용이 정확하지 않을 수 있습니다. 글에 오류가 있으면 따끔하게 지적해주세요!</p>
+
+<hr>
+
+<p>ES6에는 배열(array)을 처리 할 수 있는 여러 함수들이 있다. ES5에서 넘어온 함수들도 있고 <a href="https://lodash.com/">loadash</a>와 같은 라이브러리 함수에서 아이디어를 얻어 추가된 함수들도 있습니다.</p>
+
+<p>핼퍼 메소드들을 사용하지 않고 for loop를 사용하여 원하는 기능을 직접 구현할 수 있지만 <del>개인적인 생각으론</del> 헬퍼 메소드들을 이용하면 더 쉽게 자료들을 처리 할 수 있고 길어지는 코드에서 개발자의 실수를 줄일수 있다는 장점이 있습니다.</p>
+
+<p>이번 포스팅에서 다룰 메소드들은 다음과 같습니다.</p>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">find</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every">every</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some">some</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">reduce</a></li>
+</ul>
+
+<hr>
+
+<h2 id="foreach"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></h2>
+<blockquote>
+  <p>The <strong>forEach()</strong> method executes a provided function once per array element.</p>
+</blockquote>
+
+<p>과일이 모여있는 배열을 출력하는 자바스크립트 코드는 다음과 같이 작성할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">peach</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">blue berry</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> 반복문을 사용하면 위와 같이 배열의 원소들을 출력할 수 있습니다. 이때 배열의 반복은 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length">array.length</a> 번 반복하면 됩니다.</p>
+
+<p>위 코드를 <strong>forEach</strong> 메소드로 다시 구현해보면 아래와 같습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">peach</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">blue berry</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="nx">fruits</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">fruit</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// .forEach((fruit) =&gt;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>forEach</strong> 는 전달받은 함수를 배열의 각각 원소에대해서 실행하므로 다음과 같이 사용할 수 있습니다.</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1377383149600056" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><ins id="aswift_4_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_4_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:720px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="720" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads(2).html" data-google-container-id="a!5" data-google-query-id="CNr13MK-p_gCFVBFYAods3MJ4g" data-load-complete="true"></iframe></ins></ins></ins></div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">addComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">){</span>
+  <span class="c1">//어떤 함수</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">comments</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">굿 모닝</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">좋은 아침이네요</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아침에는 시원한 물 한잔</span><span class="dl">'</span> <span class="p">}];</span>
+
+
+<span class="c1">// for loop사용</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">posts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">addComment</span><span class="p">(</span><span class="nx">comments</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="c1">//forEach 사용</span>
+<span class="nx">comments</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">addComment</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<hr>
+
+<h2 id="map"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></h2>
+<blockquote>
+  <p>The <strong>map()</strong> method creates a new array with the results of calling a provided function on every element in this array.</p>
+</blockquote>
+
+<p>과일이름이 들어있는 배열에서 각각 원소에 <em>juice</em> 라는 문자열을 덧붙여 새로운 배열을 만든다면 아래와 같이 구현할 수 있습니다.</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1377383149600056" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><ins id="aswift_5_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_5_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:720px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="720" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads(3).html" data-google-container-id="a!6" data-google-query-id="COyS3cK-p_gCFY0qYAodDo0ALQ" data-load-complete="true"></iframe></ins></ins></ins></div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">peach</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">blue berry</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">juice</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+	<span class="nx">juice</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="dl">'</span><span class="s1"> juice</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>map</strong> 을 사용하면 아래와 같이 구현 할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">banana</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">peach</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">blue berry</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="kd">var</span> <span class="nx">juice</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">fruit</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// .map((fruit) =&gt;</span>
+	<span class="k">return</span> <span class="nx">fruit</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> juice</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>좀 더 ES6스럽게 코드를 작성한다면 아래와 같이 작성합니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">juice</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">fruit</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">fruit</span><span class="p">}</span><span class="s2"> juice`</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>map</strong> 은 각각 배열 원소들에 대해서 전달받은 함수를 호출하고 그 결과를 모아서 새로운 배열을 만듭니다. 이때 return이 없는 함수인 경우 원래 배열의 원소 갯수만큼 undefined로 채워진 배열이 만들어집니다.</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1377383149600056" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><ins id="aswift_6_expand" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_6_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;border:0;width:720px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="720" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads(4).html" data-google-container-id="a!7" data-google-query-id="CMvp2MO-p_gCFUViYAodT0wMTQ" data-load-complete="true"></iframe></ins></ins></ins></div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">comments</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">굿 모닝</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">좋은 아침이네요</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아침에는 시원한 물 한잔</span><span class="dl">'</span> <span class="p">}];</span>
+
+<span class="kd">var</span> <span class="nx">idx</span> <span class="o">=</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="nx">comment</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>위와 같이 객체로 이루어진 배열에서 특정원소의 멤버 변수로만 이루어진 배열을 만들때도 사용할 수 있습니다.
+개인적인 경험으로는 map함수가 reactJS 코딩을 할 때 자주 사용되더라구요</p>
+
+<hr>
+
+<h2 id="filter"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a></h2>
+
+<blockquote>
+  <p>The filter() method creates a new array with all elements that pass the test implemented by the provided function.</p>
+</blockquote>
+
+<p>객체 배열에서 어떤 특정 조건에 맞는 원소들로만 배열을 만들려면 아래와 같이 구현할 수 있습니다.</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1377383149600056" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><ins id="aswift_7_expand" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_7_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0;width:720px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="720" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads(5).html" data-google-container-id="a!8" data-google-query-id="CPuD_sO-p_gCFT7CTAIdiqYG3g" data-load-complete="true"></iframe></ins></ins></ins></div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">datas</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">굿 모닝</span><span class="dl">'</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">post</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">좋은 아침이네요</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span> <span class="p">,</span><span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아침에는 시원한 물 한잔</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">post</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">공부하기 싫어요</span><span class="dl">'</span> <span class="p">}];</span>
+
+<span class="kd">var</span> <span class="nx">filteredData</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">datas</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">datas</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">post</span><span class="dl">'</span><span class="p">){</span>
+    <span class="nx">filteredData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">datas</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>filter</strong> 를 사용하면 위 내용을 아래와 같이 구현할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">filteredData</span> <span class="o">=</span> <span class="nx">datas</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">post</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>filter</strong> 함수는 각각 배열의 원소에 대해서 전달받은 함수의 결과가 true를 반환한 원소들로만 배열을 만듭니다.</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1377383149600056" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;"><ins id="aswift_8_expand" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_8_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"></ins></ins></ins></div>
+
+<p>다음 예제처럼 조건이 여러개일 경우 논리 연산자를 조합해서 사용할 수 있다. data에서 like가 5개 이상인 comment만 골라낸다면 다음과 같이 구현할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">datas</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">굿 모닝</span><span class="dl">'</span><span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">좋은 아침이네요</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">공부하기 싫어요</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span> <span class="p">,</span><span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아침에는 시원한 물 한잔</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">저는 공부가 좋은데요?</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">여기 이상한 사람이 있어요</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">15</span><span class="p">}];</span>
+
+<span class="kd">var</span> <span class="nx">filteredData</span> <span class="o">=</span> <span class="nx">datas</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">like</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<hr>
+
+<h2 id="find"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">find</a></h2>
+<blockquote>
+  <p>The find() method returns a value in the array, if an element in the array satisfies the provided testing function. Otherwise undefined is returned.</p>
+</blockquote>
+
+<p>배열에서 특정 값을 검색할 때 어떤식으로 하시나요? 저는 주로 아래와 같은 방법으로 구현합니다. 아래와 같은 객체배열이 있고 id가 10인 객체를 찾는다고 하면</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">datas</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">굿 모닝</span><span class="dl">'</span><span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">좋은 아침이네요</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">공부하기 싫어요</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span> <span class="p">,</span><span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아침에는 시원한 물 한잔</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">저는 공부가 좋은데요?</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">comment</span><span class="dl">'</span><span class="p">,</span> <span class="na">content</span><span class="p">:</span> <span class="dl">'</span><span class="s1">여기 이상한 사람이 있어요</span><span class="dl">'</span> <span class="p">,</span> <span class="na">like</span><span class="p">:</span> <span class="mi">15</span><span class="p">}];</span>
+
+<span class="kd">var</span> <span class="nx">ret</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">datas</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span> <span class="nx">datas</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span> <span class="o">===</span> <span class="mi">10</span><span class="p">){</span>
+    <span class="nx">ret</span> <span class="o">=</span> <span class="nx">datas</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>처럼 구현할 수 있습니다. es6에 추가된 <strong>find</strong> 를 사용하면 위 내용을 좀 더 쉽게 구현할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">ret</span> <span class="o">=</span> <span class="nx">datas</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>filter</strong> 와 비슷해보이는데 filter와 find와 가장 큰 차이점은 find함수는 배열 원소에 대해서 주어진 함수연산을 하다가 함수가 true를 반환하면 find함수도 같이 종료됩니다. <strong>for</strong> 로 구현한 예제의 13행의 break;와 같이 동작한다고 이해하고 있습니다.</p>
+
+<p>find함수로 조건에 만족하는 원소를 반환하지 못하는 경우 <strong>undefined</strong> 를 반환합니다.</p>
+
+<hr>
+
+<h2 id="every"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every">every</a></h2>
+<blockquote>
+  <p>The <strong>every()</strong> method tests whether all elements in the array pass the test implemented by the provided function.</p>
+</blockquote>
+
+<p>배열의 값들이 어떤 기준에 맞는지 검사하기 위해서는 아래와 같은 코드를 작성합니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">scores</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">subject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">국어</span><span class="dl">'</span><span class="p">,</span> <span class="na">point</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100</span><span class="dl">'</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">subject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">영어</span><span class="dl">'</span><span class="p">,</span> <span class="na">point</span><span class="p">:</span> <span class="dl">'</span><span class="s1">90</span><span class="dl">'</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">subject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">수학</span><span class="dl">'</span><span class="p">,</span> <span class="na">point</span><span class="p">:</span> <span class="dl">'</span><span class="s1">80</span><span class="dl">'</span><span class="p">},</span>
+  <span class="p">{</span> <span class="na">subject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">컴퓨터</span><span class="dl">'</span><span class="p">,</span> <span class="na">point</span><span class="p">:</span> <span class="dl">'</span><span class="s1">10</span><span class="dl">'</span><span class="p">}];</span>
+
+<span class="kd">var</span> <span class="nx">pass</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">scores</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">point</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">){</span>
+    <span class="nx">pass</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>every</strong> 는 배열의 모든 원소들이 제공된 함수로 구현된 테스트를 통과하는지 검사합니다. 배열의 원소들에 대해서 함수를 실행하게 되고 함수가 false를 리턴하게 되면 every는 false를 리턴하게됩니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">pass</span> <span class="o">=</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span> <span class="nx">score</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">score</span><span class="p">.</span><span class="nx">point</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<hr>
+
+<h2 id="some"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some">some</a></h2>
+<blockquote>
+  <p>The some() method tests whether some element in the array passes the test implemented by the provided function.</p>
+</blockquote>
+
+<p>위 <strong>every</strong> 예제에서는 모든 과목이 70점보다 높아야만 pass가 true가 반환되는 코드를 작성했습니다. 한 과목이라도 70보다 높을때 true를 반환하고자 할 때는 <strong>some</strong> 을 사용하면 됩니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">pass</span> <span class="o">=</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span> <span class="nx">score</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">score</span><span class="p">.</span><span class="nx">point</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<hr>
+
+<h2 id="reduce"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">reduce</a></h2>
+<blockquote>
+  <p>The <strong>reduce()</strong> method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.</p>
+</blockquote>
+
+<p>배열 원소값의 합을 구하기 위해서는 아래와 같은 코드를 작성하게 됩니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+  <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">scores</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>reducer를 이용하면 아래와 같이 구현할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">number</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>reduce</strong> 는 배열의 각 원소에 대해서 첫번째 원소부터 마지막 원소 순으로 연산한 값이 줄도록 함수를 적용합니다.</p>
+
+<p>이를테면 위 예제에서 (((( 1 + 2 ) + 3 ) + 4 ) + 5) 순으로 연산을 하게 됩니다.</p>
+
+<p>0은 initial value로서 누산값의 초기값을 의미합니다.</p>
+
+<p>아래 예제는 reduce와 find를 이용하여 중복되는 원소들을 제외하고 새로 배열을 만드는 과정입니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">unique</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">array</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">isIn</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">element</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    	<span class="k">return</span> <span class="nx">element</span> <span class="o">===</span> <span class="nx">b</span><span class="p">;</span>
+    <span class="p">});</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">isIn</span><span class="p">){</span>
+      <span class="nx">a</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">a</span><span class="p">;</span>
+  <span class="p">},[]);</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">ret</span> <span class="o">=</span> <span class="nx">unique</span><span class="p">(</span><span class="nx">numbers</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>결과</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">[1,2,3,4]</code></pre></figure>
+
+<hr>
+
+<p>지금까지 ES6에서 자주 사용되는 array helper methods들을 공부한 내용을 정리해 보았습니다. 포스팅을 위해 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN</a>을 보면서 느낀거지만 대부분의 함수들이 ECMAScript5.1에서 사용할 수 있고 ES6에 새로추가된 것은 find뿐이네요. 확실히 정리를 하고나니 함수에 대한 이해가 더 넓어진것 같습니다. 다음 포스팅에서는 ES6의 <strong>const</strong>, <strong>let</strong>, <strong>var</strong> 에 대해서 포스팅 해보겠습니다.</p>
+
+<hr>
+
+<h2 id="reference">reference</h2>
+<ul>
+  <li><a href="https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/"><strong>hacks</strong> <em>Jason Orendorff</em> ES6 In Depth: Iterators and the for-of loop</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><strong>MDN</strong> Array</a></li>
+</ul>
+
+
+  <hr>
+  <div class="tags">
+    <a href="https://gnujoow.github.io/category/#Dev">
+      <code>Dev</code>
+    </a>
+  
+    <a href="http://gnujoow.github.io//tags/#es6" class="tag">es6</a>
+  
+  </div>
+</div>
+<script async="" src="./ES6 array helper method들을 알아보자 · 김로그_files/f(5).txt"></script>
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1377383149600056" data-ad-slot="6480625722" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_2_anchor" style="border: none; height: 280px; width: 720px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div id="disqus_recommendations" style="margin-bottom: 12px;"><iframe id="dsq-app7012" name="dsq-app7012" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./ES6 array helper method들을 알아보자 · 김로그_files/saved_resource.html" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 269px !important; display: inline !important; box-sizing: border-box !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div><div id="disqus_thread"><iframe id="dsq-app9542" name="dsq-app9542" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./ES6 array helper method들을 알아보자 · 김로그_files/saved_resource(1).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 394px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+var disqus_config = function () {
+this.page.url = "http://gnujoow.github.io/" + "/dev/2016/10/14/Dev6-es6-array-helper/"; // Replace PAGE_URL with your page's canonical URL variable
+//this.page.identifier = "/dev/2016/10/14/Dev6-es6-array-helper/"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kimlog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+  
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_3_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_3_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/ads(6).html" data-google-container-id="a!4" data-load-complete="true"></iframe></ins></ins></ins><div id="__endic_crx__"><div class="css-1abc5oq"></div></div><iframe style="display: none;" src="./ES6 array helper method들을 알아보자 · 김로그_files/saved_resource(2).html"></iframe><iframe style="display: none;" src="./ES6 array helper method들을 알아보자 · 김로그_files/saved_resource(3).html"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: block; width: 100% !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; bottom: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,26 L0,6 A6,6 0 0,1 6,1 L50,1 A6,6 0 0,1 56,6 L56,20 A6,6 0 0,0 62,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);"></path><rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="down" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="12" x2="28" y2="18"></line><line x1="28" y1="18" x2="34" y2="12"></line></g></svg></span></ins><ins id="aswift_9_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_9_anchor" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_9" name="aswift_9" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./ES6 array helper method들을 알아보자 · 김로그_files/zrt_lookup.html" data-google-container-id="a!a" data-google-query-id="CKSOs8K-p_gCFZR0YAodpzoPRA" data-load-complete="true"></iframe></ins></ins></ins><iframe src="./ES6 array helper method들을 알아보자 · 김로그_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./ES6 array helper method들을 알아보자 · 김로그_files/zrt_lookup(1).html" style="display: none;"></iframe></html>
